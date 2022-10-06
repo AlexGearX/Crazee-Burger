@@ -1,8 +1,8 @@
-import LoginPages from "./components/pages/login/LoginPage";
+import LoginPage from "./components/pages/login/LoginPage";
 
 function App() {
   return (
-    <LoginPages />
+    <LoginPage />
   );
 }
 
