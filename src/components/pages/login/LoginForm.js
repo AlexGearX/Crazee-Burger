@@ -1,19 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginForm() {
 
-    //state
-    const [prenom, setPrenom] = useState("");
+    const navigate = useNavigate();
 
+    //state
+    const [name, setName] = useState("");
     // comportements
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        alert("Bonjour " + prenom);
-        setPrenom("");
-    };
+    const handleSubmit = useCallback(() => navigate("/order/" + name, { replace: true }, [navigate]));
 
     const handleChange = (event) => {
-        setPrenom(event.target.value);
+        setName(event.target.value);
     }
     //render
     return (
@@ -22,7 +20,7 @@ export default function LoginForm() {
             <br />
             <h2>Connectez-vous</h2>
             <input
-                value={prenom}
+                value={name}
                 type="text"
                 placeholder="Entrez votre prénom..."
                 onChange={handleChange}
