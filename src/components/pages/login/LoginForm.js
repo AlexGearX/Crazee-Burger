@@ -1,19 +1,17 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function LoginForm() {
 
     const navigate = useNavigate();
-
-    //state
     const [name, setName] = useState("");
-    // comportements
-    const handleSubmit = useCallback(() => navigate("/order/" + name, { replace: true }, [navigate]));
 
-    const handleChange = (event) => {
-        setName(event.target.value);
-    }
-    //render
+
+    const handleSubmit = () => navigate(`/order/${name}`, { replace: true })
+
+    const handleChange = (event) => setName(event.target.value)
+
+
     return (
         <form action="submit" onSubmit={handleSubmit}>
             <h1>Bienvenue chez nous !</h1>

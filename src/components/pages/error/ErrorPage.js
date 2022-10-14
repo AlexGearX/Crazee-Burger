@@ -1,12 +1,11 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
 
 export default function ErrorPage() {
 
     const navigate = useNavigate();
 
-    const handleOnClick = useCallback(() => navigate('/', { replace: true }), [navigate]);
+    const handleOnClick = () => navigate('/', { replace: true })
 
     return (
         <div>

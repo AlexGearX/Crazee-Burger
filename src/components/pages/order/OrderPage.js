@@ -1,11 +1,13 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+
 export default function OrderPage() {
 
     const navigate = useNavigate();
     const params = useParams()
 
-    const handleOnClick = useCallback(() => navigate('/', { replace: true }), [navigate]);
+
+    const handleOnClick = () => navigate('/', { replace: true })
 
     return (
         <div>
