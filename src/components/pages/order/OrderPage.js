@@ -4,15 +4,15 @@ import { useParams, useNavigate } from 'react-router-dom';
 export default function OrderPage() {
 
     const navigate = useNavigate();
-    const params = useParams()
+    const {name} = useParams()
 
 
-    const handleOnClick = () => navigate('/', { replace: true })
+    const handleClick = () => navigate('/', { replace: true })
 
     return (
         <div>
-            <h1>Bonjour {params.name}</h1>
-            <button onClick={handleOnClick}>Déconnexion</button>
+            <h1>Bonjour {name}</h1>
+            <button onClick={handleClick}>Déconnexion</button>
         </div>
     )
 }
