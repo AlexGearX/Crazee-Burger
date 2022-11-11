@@ -6,16 +6,7 @@ import { theme } from "../../../theme";
 
 export default function LoginPage() {
   return (
-    <LoginPageStyled
-      style={{
-        backgroundColor: "black",
-        backgroundImage: `url(${background})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        overflow: "hidden",
-      }}
-    >
+    <LoginPageStyled>
       <div className="LoginPageTitle">
         <h1 className="h1-LoginPages">CRAZEE</h1>
         <img src={logoLoginPage} alt="Logo" />
@@ -47,5 +38,19 @@ const LoginPageStyled = styled.div`
   }
   img {
     width: 200px;
+  }
+
+  ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: url(${background}) rgba(0, 0, 0, 0.7);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
   }
 `;
