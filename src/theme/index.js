@@ -16,7 +16,7 @@ const colors = {
   greySemiDark: "#93a2b1",
   greyDark: "#6f737e",
   greyBlue: "#747b91",
-  orange: "#ea6b00",
+  orange: "#f56a2c",
 };
 
 const spacing = {
@@ -40,6 +40,7 @@ const fonts = {
   P4: "36px",
   P5: "48px",
   P6: "60px",
+  P7: "72px",
 };
 const gridUnit = 8;
 const borderRadius = {

@@ -15,8 +15,8 @@ export default function LoginForm() {
 
   return (
     <LoginFormStyled action="submit" onSubmit={handleSubmit}>
-      <h1 className="h1-LoginForm">Bienvenue chez nous !</h1>
-      <div class="ligne"></div>
+      <h1>Bienvenue chez nous !</h1>
+      <div className="ligne"></div>
       <h2 className="h2-LoginForm">Connectez-vous</h2>
       <div className="cta-container">
         <div className="input-container cta-LoginForm">
@@ -44,17 +44,16 @@ export default function LoginForm() {
 }
 
 const LoginFormStyled = styled.form`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .h1-LoginForm {
+  h1 {
+    font-family: "Amatic SC", cursive;
+    text-align: center;
+    color: ${theme.colors.white};
     font-size: ${theme.fonts.P5};
   }
   .ligne {
-    width: 370px;
-    border: 1px solid ${theme.colors.orange};
+    width: 380px;
+    border: 1pt solid ${theme.colors.orange};
+    background-color: ${theme.colors.orange};
     margin-left: auto;
     margin-right: auto;
   }
@@ -73,7 +72,7 @@ const LoginFormStyled = styled.form`
     align-items: center;
   }
   .input-container {
-    width: 370px;
+    width: 380px;
     background-color: ${theme.colors.white};
     display: flex;
     flex-direction: row;
@@ -98,13 +97,13 @@ const LoginFormStyled = styled.form`
   }
   input {
     color: ${theme.colors.dark};
-    font-size: ${theme.fonts.p0};
+    font-size: ${theme.fonts.P0};
     font-weight: ${theme.weights.semiBold};
     width: 300px;
     border: 0px;
   }
   button {
-    width: 370px;
+    width: 380px;
     color: ${theme.colors.white};
     background-color: ${theme.colors.primary};
   }
