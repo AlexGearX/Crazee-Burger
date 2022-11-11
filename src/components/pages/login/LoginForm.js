@@ -7,7 +7,7 @@ export default function LoginForm() {
     const [name, setName] = useState("");
 
 
-    const handleSubmit = () => navigate(`/order/${name}`, { replace: true })
+    const handleSubmit = () => navigate(`/order/${name}`)
 
     const handleChange = (event) => setName(event.target.value)
 
