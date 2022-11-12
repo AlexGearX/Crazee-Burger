@@ -28,7 +28,7 @@ const LogoStyled = styled.div`
   .h1-LoginPages {
     margin: 10px;
     color: ${theme.colors.primary};
-    font-size: ${theme.fonts.P7};
+    font-size: ${theme.fonts.P8};
     letter-spacing: ${theme.spacing.xxs};
     font-weight: ${theme.weights.heavy};
   }
