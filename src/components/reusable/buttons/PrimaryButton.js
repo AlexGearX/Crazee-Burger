@@ -2,12 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../theme";
 
-export default function PrimaryButton({ className, divBefore, text, divAfter }) {
+export default function PrimaryButton({
+  className,
+  insertBeforeBtnText,
+  text,
+  insertAfterBtnText,
+}) {
   return (
     <PrimaryButtonStyled className={className}>
-      {divBefore}
+      {insertBeforeBtnText}
       {text}
-      {divAfter}
+      {insertAfterBtnText}
     </PrimaryButtonStyled>
   );
 }

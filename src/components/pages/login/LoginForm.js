@@ -13,30 +13,29 @@ export default function LoginForm() {
 
   const handleSubmit = () => navigate(`/order/${name}`);
 
-  const handleChange = (event) => setName(event.target.value);
-
   return (
     <LoginFormStyled action="submit" onSubmit={handleSubmit}>
       <h1>Bienvenue chez nous !</h1>
-      <div className="line"></div>
+      <hr className="line"></hr>
       <h2>Connectez-vous</h2>
       <div className="cta-container">
-        <div className="input-container cta-LoginForm">
-          <div className="personcircle">
-            <IoPersonCircleOutline size={25} color={theme.colors.greyBlue}></IoPersonCircleOutline>
-          </div>
-          <Input
-            value={name}
-            type={"text"}
-            placeholder={"Entrez votre prénom"}
-            onChange={handleChange}
-            required={"required"}
-          />
-        </div>
+        <Input
+          className={"input-container cta-LoginForm"}
+          value={name}
+          type={"text"}
+          placeholder={"Entrez votre prénom"}
+          onChange={(event) => setName(event.target.value)}
+          required={"required"}
+          insertBeforeInput={
+            <div className="personcircle">
+              <IoPersonCircleOutline size={25} color={theme.colors.greyBlue} />
+            </div>
+          }
+        />
         <PrimaryButton
           className={"cta-LoginForm"}
           text={"Accéder à mon espace"}
-          divAfter={
+          insertAfterBtnText={
             <div className="arrow">
               <MdKeyboardArrowRight size={20} />
             </div>

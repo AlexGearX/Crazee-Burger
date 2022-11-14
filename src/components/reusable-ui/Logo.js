@@ -6,9 +6,9 @@ import { theme } from "../../theme";
 export default function Logo() {
   return (
     <LogoStyled>
-      <h1 className="h1-LoginPages">CRAZEE</h1>
+      <h1>CRAZEE</h1>
       <img src={logoLoginPage} alt="Logo" />
-      <h1 className="h1-LoginPages">BURGER</h1>
+      <h1>BURGER</h1>
     </LogoStyled>
   );
 }
@@ -24,8 +24,6 @@ const LogoStyled = styled.div`
     font-family: "Amatic SC", cursive;
     text-align: center;
     color: ${theme.colors.white};
-  }
-  .h1-LoginPages {
     margin: 10px;
     color: ${theme.colors.primary};
     font-size: ${theme.fonts.P8};
