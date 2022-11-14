@@ -4,14 +4,15 @@ import styled from "styled-components";
 import { theme } from "../../../theme";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import PrimaryButton from "../../reusable/buttons/PrimaryButton";
-import Input from "../../reusable/Input";
+import PrimaryButton from "../../reusable-ui/buttons/PrimaryButton";
+import TextInput from "../../reusable-ui/TextInput";
 
 export default function LoginForm() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
 
   const handleSubmit = () => navigate(`/order/${name}`);
+  const handleChange = (event) => setName(event.target.value);
 
   return (
     <LoginFormStyled action="submit" onSubmit={handleSubmit}>
@@ -19,23 +20,20 @@ export default function LoginForm() {
       <hr className="line"></hr>
       <h2>Connectez-vous</h2>
       <div className="cta-container">
-        <Input
-          className={"input-container cta-LoginForm"}
+        <TextInput
           value={name}
-          type={"text"}
-          placeholder={"Entrez votre prénom"}
-          onChange={(event) => setName(event.target.value)}
-          required={"required"}
-          insertBeforeInput={
+          onChange={handleChange}
+          placeholder="Entrez votre prénom"
+          required
+          icon={
             <div className="personcircle">
               <IoPersonCircleOutline size={25} color={theme.colors.greyBlue} />
             </div>
           }
         />
         <PrimaryButton
-          className={"cta-LoginForm"}
-          text={"Accéder à mon espace"}
-          insertAfterBtnText={
+          label="Accéder à mon espace"
+          icon={
             <div className="arrow">
               <MdKeyboardArrowRight size={20} />
             </div>
@@ -74,31 +72,13 @@ const LoginFormStyled = styled.form`
     justify-content: center;
     align-items: center;
 
-    .input-container {
-      flex-direction: row;
-      background-color: ${theme.colors.white};
-      width: 380px;
-      margin-bottom: 20px;
+    .personcircle {
+      padding-top: 5px;
+      padding-right: 10px;
     }
-    .cta-LoginForm {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-
-      border-radius: ${theme.borderRadius.round};
-      border: 1px solid black;
-      font-size: ${theme.fonts.p0};
-      font-weight: ${theme.weights.semiBold};
-      height: 50px;
-      .personcircle {
-        padding-top: 5px;
-        padding-right: 10px;
-      }
-      .arrow {
-        padding-top: 3px;
-        margin-left: 10px;
-      }
+    .arrow {
+      padding-top: 3px;
+      margin-left: 10px;
     }
   }
 `;
