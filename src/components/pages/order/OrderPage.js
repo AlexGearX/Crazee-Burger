@@ -7,7 +7,7 @@ export default function OrderPage() {
     const {name} = useParams()
 
 
-    const handleClick = () => navigate('/', { replace: true })
+    const handleClick = () => navigate('/')
 
     return (
         <div>

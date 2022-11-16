@@ -5,7 +5,7 @@ export default function ErrorPage() {
 
     const navigate = useNavigate();
 
-    const handleClick = () => navigate('/', { replace: true })
+    const handleClick = () => navigate('/')
 
     return (
         <div>
