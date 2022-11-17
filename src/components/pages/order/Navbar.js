@@ -10,13 +10,17 @@ export default function Navbar({ name }) {
   const handleClick = () => navigate("/");
   return (
     <NavbarStyled>
-      <Logo className="logo"></Logo>
+      <button className="logo-button" onClick={() => window.location.reload(false)}>
+        <Logo className="logo"></Logo>
+      </button>
       <div className="user-panel">
         <div className="user-info">
           <h3>
             Hey, <span>{name}</span>
           </h3>
-          <button onClick={handleClick}>Se déconnecter</button>
+          <button className="deconnect-button" onClick={handleClick}>
+            Se déconnecter
+          </button>
         </div>
         <IoPersonCircleOutline className="icon" size={40} color={theme.colors.greyDark} />
       </div>
@@ -49,10 +53,18 @@ const NavbarStyled = styled.div`
     font-weight: ${theme.weights.bold};
   }
   button {
-    cursor: pointer;
+    background-color: transparent;
     border: 0px;
+  }
+  .logo-button {
+    transform: scale(0.4);
+    margin-left: -170px;
+    cursor: pointer;
+  }
+  .deconnect-button {
+    cursor: pointer;
     font-family: "Open Sans", sans-serif;
-    background-color: ${theme.colors.background_white};
+    background-color: transparent;
     text-align: center;
     font-size: ${theme.fonts.XXS};
     font-weight: ${theme.weights.medium};
@@ -62,10 +74,7 @@ const NavbarStyled = styled.div`
     }
   }
   .logo {
-    cursor: pointer;
-    transform: scale(0.4);
     margin: 0;
-    margin-left: -170px;
   }
 
   .user-panel {
