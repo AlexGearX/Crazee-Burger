@@ -37,7 +37,7 @@ const NavbarStyled = styled.div`
   border: 1px transparent black;
   border-radius: ${theme.borderRadius.extraRound} ${theme.borderRadius.extraRound} 0px 0px;
   background: ${theme.colors.white};
-  margin: ${theme.spacing.md};
+  box-shadow: -1px 9px 13px -1px rgba(0, 0, 0, 0.2);
 
   h3 {
     font-family: "Open Sans", sans-serif;
