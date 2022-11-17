@@ -14,7 +14,7 @@ export default function Navbar({ name }) {
         <Logo className="logo"></Logo>
       </button>
       <div className="user-panel">
-        <div className="user-info">
+        <div>
           <h3>
             Hey, <span>{name}</span>
           </h3>
@@ -47,25 +47,25 @@ const NavbarStyled = styled.div`
     color: ${theme.colors.greyBlue};
     margin-bottom: 0px;
     margin-left: 25px;
-  }
-  span {
-    color: ${theme.colors.primary};
-    font-weight: ${theme.weights.bold};
+    span {
+      color: ${theme.colors.primary};
+      font-weight: ${theme.weights.bold};
+    }
   }
   button {
+    cursor: pointer;
     background-color: transparent;
     border: 0px;
   }
   .logo-button {
     transform: scale(0.4);
     margin-left: -170px;
-    cursor: pointer;
+    .logo {
+      margin: 0;
+    }
   }
   .deconnect-button {
-    cursor: pointer;
     font-family: "Open Sans", sans-serif;
-    background-color: transparent;
-    text-align: center;
     font-size: ${theme.fonts.XXS};
     font-weight: ${theme.weights.medium};
     color: ${theme.colors.greyDark};
@@ -73,16 +73,12 @@ const NavbarStyled = styled.div`
       text-decoration: underline ${theme.colors.dark};
     }
   }
-  .logo {
-    margin: 0;
-  }
-
   .user-panel {
     display: flex;
     margin-right: 70px;
     margin-bottom: 20px;
-  }
-  .icon {
-    margin-top: 15px;
+    .icon {
+      margin-top: 15px;
+    }
   }
 `;
