@@ -8,11 +8,10 @@ import Logo from "../../reusable-ui/Logo";
 export default function Navbar({ name }) {
   const navigate = useNavigate();
   const handleClick = () => navigate("/");
+  const reloadPage = () => window.location.reload(false);
   return (
     <NavbarStyled>
-      <button className="logo-button" onClick={() => window.location.reload(false)}>
-        <Logo className="logo"></Logo>
-      </button>
+      <Logo className="logo" onClick={reloadPage}></Logo>
       <div className="user-panel">
         <div className="user-info">
           <h3>
@@ -33,7 +32,7 @@ const NavbarStyled = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: ${theme.spacing.xxl};
+  height: ${theme.spacing.xxxl};
   border: 1px transparent black;
   border-radius: ${theme.borderRadius.extraRound} ${theme.borderRadius.extraRound} 0px 0px;
   background: ${theme.colors.white};
@@ -58,12 +57,11 @@ const NavbarStyled = styled.div`
     background-color: transparent;
     border: 0px;
   }
-  .logo-button {
+  .logo {
+    cursor: pointer;
+    margin: 0;
     transform: scale(0.4);
     margin-left: -170px;
-    .logo {
-      margin: 0;
-    }
   }
   .deconnect-button {
     font-family: "Open Sans", sans-serif;
