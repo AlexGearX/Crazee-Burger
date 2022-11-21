@@ -19,18 +19,8 @@ export default function OrderPage() {
 const OrderPageStyled = styled.div`
   display: flex;
   justify-content: center;
-  ::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background: ${theme.colors.primary};
-    background-size: cover;
-    background-position: center;
-  }
+  background: ${theme.colors.primary};
+
   .container {
     background-color: ${theme.colors.background_white};
     border: 1px transparent black;
