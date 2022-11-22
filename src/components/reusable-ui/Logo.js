@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import logoLoginPage from "../../assets/images/login/F03logo-orange.png";
 import { theme } from "../../theme";
 
 export default function Logo({ className, onClick }) {
   return (
     <LogoStyled className={className} onClick={onClick}>
       <h1>CRAZEE</h1>
-      <img src={logoLoginPage} alt="Logo" />
+      <img src={"images/F03logo-orange.png"} alt="Logo" />
       <h1>BURGER</h1>
     </LogoStyled>
   );
