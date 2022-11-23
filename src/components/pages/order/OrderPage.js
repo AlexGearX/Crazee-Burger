@@ -30,6 +30,6 @@ const OrderPageStyled = styled.div`
     margin: ${theme.spacing.md};
     width: 100%;
     max-width: 1400px;
-    box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0px 8px 20px 8px rgba(0, 0, 0, 0.4);
   }
 `;

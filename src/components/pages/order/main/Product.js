@@ -15,12 +15,15 @@ export default function Product() {
   );
 }
 const ProductStyled = styled.div`
-  justify-content: space-evenly;
-  justify-items: center;
-  align-content: space-evenly;
-  align-items: center;
-  background: blue;
+  flex: 1;
   display: grid;
+  justify-content: space-around;
+  justify-items: center;
+  align-content: space-around;
+  align-items: center;
+
   grid-template-columns: repeat(4, 1fr);
-  grid-row-gap: 76.67px;
+  padding: 150px 10px 50px 10px;
+  gap: 70px 10px;
+  overflow-y: auto;
 `;
