@@ -23,7 +23,6 @@ const ProductStyled = styled.div`
   padding: 50px 10px 50px 10px;
   gap: 70px 10px;
 
-  overflow: hidden;
   overflow-y: auto;
   ::-webkit-scrollbar {
     width: 12px;

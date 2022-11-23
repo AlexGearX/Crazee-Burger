@@ -22,6 +22,7 @@ const OrderPageStyled = styled.div`
   display: flex;
   justify-content: center;
   background: ${theme.colors.primary};
+  width: 100%;
 
   .container {
     background-color: ${theme.colors.background_white};
