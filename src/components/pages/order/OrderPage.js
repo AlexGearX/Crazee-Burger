@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../../theme";
+import Main from "./main/Main";
 import Navbar from "./navbar/Navbar";
 
 export default function OrderPage() {
@@ -11,6 +12,7 @@ export default function OrderPage() {
     <OrderPageStyled>
       <div className="container">
         <Navbar name={name} />
+        <Main />
       </div>
     </OrderPageStyled>
   );
@@ -28,5 +30,6 @@ const OrderPageStyled = styled.div`
     margin: ${theme.spacing.md};
     width: 100%;
     max-width: 1400px;
+    box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
   }
 `;
