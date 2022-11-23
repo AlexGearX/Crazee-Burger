@@ -6,7 +6,10 @@ import truncate from "../../../../utils/processString";
 export default function Card({ card }) {
   return (
     <CardStyled>
-      <img src={card.imageSource} alt={card.title}></img>
+      <div className="img-container">
+        <img src={card.imageSource} alt={card.title}></img>
+      </div>
+
       <b>{truncate(card.title, 18)}</b>
       <div className="product-add">
         <p>{parseFloat(card.price).toFixed(2)} €</p>
@@ -26,9 +29,15 @@ const CardStyled = styled.div`
   width: 240px;
   height: 330px;
 
-  img {
-    max-height: 145px;
-    max-width: 200px;
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 145px;
+    img {
+      max-height: 145px;
+      max-width: 200px;
+    }
   }
   b {
     font-family: "Amatic SC", cursive;
@@ -36,6 +45,7 @@ const CardStyled = styled.div`
     color: ${theme.colors.dark};
     font-size: ${theme.fonts.P4};
     margin: 10px;
+    margin-bottom: 50px;
   }
   .product-add {
     display: flex;
