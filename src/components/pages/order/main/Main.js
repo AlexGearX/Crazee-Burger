@@ -5,7 +5,7 @@ import Product from "./Product";
 export default function Main() {
   return (
     <div>
-      <Basket />
+      {/* <Basket /> */}
       <Product />
     </div>
   );
