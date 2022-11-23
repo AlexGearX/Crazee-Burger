@@ -25,8 +25,6 @@ const OrderPageStyled = styled.div`
 
   .container {
     background-color: ${theme.colors.background_white};
-    border: 1px solid blue;
-    border: 1px transparent black;
     border-radius: ${theme.borderRadius.extraRound};
     margin: ${theme.spacing.lg} ${theme.spacing.md};
     width: 100%;
