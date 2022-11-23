@@ -17,13 +17,13 @@ export const fakeMenu1 = [
     isAvailable: true,
     isAdvertised: false,
   },
-]
+];
 
 export const fakeMenu2 = [
   {
     id: 1,
     imageSource: "/images/burger-bacon-egg.png",
-    title: "Burger Smoke BBQ",
+    title: "Burger Smoke BBQ MMMMMMMMMMMMMMM",
     price: 5.598,
     quantity: 0,
     isAvailable: true,
@@ -110,4 +110,4 @@ export const fakeMenu2 = [
     isAvailable: true,
     isAdvertised: false,
   },
-]
+];
