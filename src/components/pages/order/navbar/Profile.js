@@ -13,14 +13,14 @@ export default function Profile({ name }) {
         </h3>
         <Link to="/">Se déconnecter</Link>
       </div>
-      <IoPersonCircleOutline className="icon" size={40} color={theme.colors.greyDark} />
+      <IoPersonCircleOutline className="icon" size={42} color={theme.colors.greyDark} />
     </ProfileStyled>
   );
 }
 const ProfileStyled = styled.div`
   display: flex;
   margin-right: 70px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   h3 {
     font-family: "Open Sans", sans-serif;
     text-align: center;
@@ -52,9 +52,9 @@ const ProfileStyled = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    margin-right: 5px;
+    margin-right: 8px;
   }
   .icon {
-    margin-top: 15px;
+    margin-top: 25px;
   }
 `;

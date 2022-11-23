@@ -7,7 +7,7 @@ export default function Card({ card }) {
   return (
     <CardStyled>
       <img src={card.imageSource} alt={card.title}></img>
-      <b>{truncate(card.title, 16)}</b>
+      <b>{truncate(card.title, 18)}</b>
       <div className="product-add">
         <p>{parseFloat(card.price).toFixed(2)} €</p>
         <PrimaryButton className={"add-button"} label="Ajouter" />

@@ -12,8 +12,9 @@ export default function Main() {
   );
 }
 const MainStyled = styled.div`
+  position: relative;
   display: flex;
   flex-direction: row;
-  position: relative;
-  max-height: 86.5vh;
+  height: calc(85vh);
+  border: 1px solid red;
 `;

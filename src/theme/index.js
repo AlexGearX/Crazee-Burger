@@ -29,7 +29,6 @@ const spacing = {
   xxl: "64px",
   xxxl: "84px",
 };
-
 const fonts = {
   XXXS: "8px",
   XXS: "10px",

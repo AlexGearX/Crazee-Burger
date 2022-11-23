@@ -31,7 +31,7 @@ const NavbarStyled = styled.div`
   .logo {
     cursor: pointer;
     margin: 0;
-    transform: scale(0.4);
-    margin-left: -170px;
+    transform: scale(0.45);
+    margin-left: -140px;
   }
 `;
