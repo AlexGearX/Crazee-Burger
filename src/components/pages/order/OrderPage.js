@@ -27,7 +27,7 @@ const OrderPageStyled = styled.div`
   .container {
     background-color: ${theme.colors.background_white};
     border-radius: ${theme.borderRadius.extraRound};
-    margin: ${theme.spacing.lg} ${theme.spacing.md};
+    margin: ${theme.spacing.md};
     width: 100%;
     max-width: 1400px;
     box-shadow: inset 0px 8px 20px 8px rgba(0, 0, 0, 0.4);

@@ -13,18 +13,18 @@ export default function Profile({ name }) {
         </h3>
         <Link to="/">Se déconnecter</Link>
       </div>
-      <IoPersonCircleOutline className="icon" size={42} color={theme.colors.greyDark} />
+      <IoPersonCircleOutline className="icon" size={50} color={theme.colors.greyDark} />
     </ProfileStyled>
   );
 }
 const ProfileStyled = styled.div`
   display: flex;
   margin-right: 70px;
-  margin-bottom: 40px;
+
   h3 {
     font-family: "Open Sans", sans-serif;
     text-align: center;
-    font-size: ${theme.fonts.P0};
+    font-size: ${theme.fonts.P1};
     font-weight: ${theme.weights.medium};
     color: ${theme.colors.greyBlue};
     margin-bottom: 5px;
@@ -50,11 +50,10 @@ const ProfileStyled = styled.div`
   .user-info {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: flex-end;
     margin-right: 8px;
   }
   .icon {
-    margin-top: 25px;
+    margin-top: 17px;
   }
 `;

@@ -26,6 +26,7 @@ const NavbarStyled = styled.div`
   border-radius: ${theme.borderRadius.extraRound} ${theme.borderRadius.extraRound} 0px 0px;
   background: ${theme.colors.white};
   box-shadow: -1px 9px 13px -1px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid ${theme.colors.greyLight};
 
   height: 10%;
   .logo {

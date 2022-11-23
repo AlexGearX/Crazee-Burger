@@ -44,23 +44,24 @@ const CardStyled = styled.div`
     text-align: center;
     color: ${theme.colors.dark};
     font-size: ${theme.fonts.P4};
-    margin: 10px;
-    margin-bottom: 50px;
+    margin: 20px 0 0 0;
   }
   .product-add {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-items: center;
     align-items: center;
+    margin-top: 10px;
     p {
       font-family: "Open Sans", sans-serif;
-      text-align: center;
       color: ${theme.colors.primary};
-      font-size: ${theme.fonts.P0};
+      font-size: ${theme.fonts.P1};
     }
     .add-button {
-      width: 92px;
-      height: 38px;
-      margin-left: 50px;
+      width: 102px;
+      height: 42px;
     }
   }
 `;
