@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../theme";
 
-export default function PrimaryButton({ label, icon }) {
+export default function PrimaryButton({ label, icon, className }) {
   return (
-    <PrimaryButtonStyled>
+    <PrimaryButtonStyled className={className}>
       {label}
       {icon}
     </PrimaryButtonStyled>
@@ -21,7 +21,7 @@ const PrimaryButtonStyled = styled.button`
   width: 380px;
 
   border-radius: ${theme.borderRadius.round};
-  border: 1px solid black;
+  border: 0px solid black;
 
   font-size: ${theme.fonts.p0};
   font-weight: ${theme.weights.semiBold};

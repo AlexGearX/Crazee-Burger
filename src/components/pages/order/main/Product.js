@@ -26,4 +26,17 @@ const ProductStyled = styled.div`
   padding: 150px 10px 50px 10px;
   gap: 70px 10px;
   overflow-y: auto;
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+  }
 `;
