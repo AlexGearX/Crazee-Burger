@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../../theme";
 import PrimaryButton from "../../../reusable-ui/buttons/PrimaryButton";
-
+import truncate from "../../../../utils/processString";
 export default function Card({ card }) {
   return (
     <CardStyled>
       <img src={card.imageSource} alt={card.title}></img>
-      <b>{card.title}</b>
+      <b>{truncate(card.title, 16)}</b>
       <div className="product-add">
         <p>{parseFloat(card.price).toFixed(2)} €</p>
         <PrimaryButton className={"add-button"} label="Ajouter" />
