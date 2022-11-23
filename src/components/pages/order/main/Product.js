@@ -1,16 +1,26 @@
 import React, { useState } from "react";
-import { fakeMenu1 } from "../../../../fakeData/fakeMenu";
+import styled from "styled-components";
+import { fakeMenu2 } from "../../../../fakeData/fakeMenu";
 import Card from "./Card";
 
 export default function Product() {
-  const [cards, setCards] = useState(fakeMenu1);
+  const [cards, setCards] = useState(fakeMenu2);
 
-  for (let index = 0; index < fakeMenu1.length - 1; index++) {}
   return (
-    <div>
+    <ProductStyled>
       {cards.map((card) => (
         <Card card={card}></Card>
       ))}
-    </div>
+    </ProductStyled>
   );
 }
+const ProductStyled = styled.div`
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+  background: blue;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 76.67px;
+`;
