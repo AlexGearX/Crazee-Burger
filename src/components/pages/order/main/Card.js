@@ -44,7 +44,7 @@ const CardStyled = styled.div`
     color: ${theme.colors.dark};
     font-size: ${theme.fonts.P4};
     width: 100%;
-    margin: 20px 0 0 22%;
+    margin: 20px 0 0 20%;
   }
   .product-add {
     display: grid;

@@ -16,5 +16,5 @@ const MainStyled = styled.div`
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  height: calc(90%);
+  height: calc(84.9vh);
 `;
