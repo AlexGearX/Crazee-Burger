@@ -17,12 +17,11 @@ const PrimaryButtonStyled = styled.button`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
   height: 50px;
   width: 380px;
 
+  border: 1px solid ${theme.colors.primary};
   border-radius: ${theme.borderRadius.round};
-  border: 0px solid black;
 
   font-size: ${theme.fonts.p0};
   font-weight: ${theme.weights.semiBold};
@@ -34,8 +33,8 @@ const PrimaryButtonStyled = styled.button`
     content: "";
     background-color: ${theme.colors.white};
     color: ${theme.colors.primary};
-    border: 1px solid ${theme.colors.primary};
     transition: 0.3s;
+    border: 1px solid ${theme.colors.primary};
   }
   :active {
     content: "";
