@@ -41,19 +41,19 @@ const CardStyled = styled.div`
   }
   b {
     font-family: "Amatic SC", cursive;
-    text-align: center;
     color: ${theme.colors.dark};
     font-size: ${theme.fonts.P4};
-    margin: 20px 0 0 0;
+    width: 100%;
+    margin: 20px 0 0 22%;
   }
   .product-add {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 0px;
+    grid-column-gap: -20px;
     grid-row-gap: 0px;
-    justify-items: center;
+    justify-items: left;
     align-items: center;
-    margin-top: 10px;
+    padding: 0 25px 0 25px;
     p {
       font-family: "Open Sans", sans-serif;
       color: ${theme.colors.primary};

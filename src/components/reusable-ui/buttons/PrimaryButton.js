@@ -12,6 +12,7 @@ export default function PrimaryButton({ label, icon, className }) {
 }
 
 const PrimaryButtonStyled = styled.button`
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -34,6 +35,7 @@ const PrimaryButtonStyled = styled.button`
     background-color: ${theme.colors.white};
     color: ${theme.colors.primary};
     border: 1px solid ${theme.colors.primary};
+    transition: 0.3s;
   }
   :active {
     content: "";

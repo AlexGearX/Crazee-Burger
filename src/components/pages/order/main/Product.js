@@ -20,8 +20,8 @@ const ProductStyled = styled.div`
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(4, 1fr);
-  padding: 50px 10px 50px 10px;
-  gap: 60px 0px;
+  padding: 50px 50px 150px;
+  gap: 60px 0;
 
   overflow-y: auto;
   ::-webkit-scrollbar {
