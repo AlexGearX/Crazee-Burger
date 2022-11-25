@@ -8,8 +8,8 @@ export default function Product() {
 
   return (
     <ProductStyled>
-      {cards.map((card) => (
-        <Card card={card}></Card>
+      {cards.map(({ imageSource, title, price }) => (
+        <Card imageSource={imageSource} title={title} price={price} label={"ajouter"}></Card>
       ))}
     </ProductStyled>
   );
