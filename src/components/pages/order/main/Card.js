@@ -44,7 +44,7 @@ const CardStyled = styled.div`
     color: ${theme.colors.dark};
     font-size: ${theme.fonts.P4};
     width: 100%;
-    margin: 20px 0 0 20%;
+    margin: 20px 0 0 15%;
   }
   .product-add {
     display: grid;
@@ -53,7 +53,7 @@ const CardStyled = styled.div`
     grid-row-gap: 0px;
     justify-items: left;
     align-items: center;
-    padding: 0 25px 0 25px;
+    max-width: 200px;
     p {
       font-family: "Open Sans", sans-serif;
       color: ${theme.colors.primary};

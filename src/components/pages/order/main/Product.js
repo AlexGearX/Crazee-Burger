@@ -19,7 +19,7 @@ const ProductStyled = styled.div`
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 50px 50px 150px;
   gap: 60px 0;
 
