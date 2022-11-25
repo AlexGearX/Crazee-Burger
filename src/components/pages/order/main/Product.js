@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { fakeMenu2 } from "../../../../fakeData/fakeMenu";
-import Card from "./Card";
+import Card from "../../../reusable-ui/Card";
 
 export default function Product() {
   const [cards, setCards] = useState(fakeMenu2);
