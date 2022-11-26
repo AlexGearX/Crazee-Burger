@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../theme";
 import PrimaryButton from "./buttons/PrimaryButton";
-import truncate from "../../utils/processString";
 
 export default function Card({ imageSource, title, price, label }) {
   return (
@@ -11,9 +10,9 @@ export default function Card({ imageSource, title, price, label }) {
         <img src={imageSource} alt={title}></img>
       </div>
 
-      <span>{truncate(title, 18)}</span>
+      <span>{title}</span>
       <div className="product-add">
-        <p>{parseFloat(price).toFixed(2)} €</p>
+        <p>{price}</p>
         <PrimaryButton className={"add-button"} label={label} />
       </div>
     </CardStyled>
@@ -44,8 +43,10 @@ const CardStyled = styled.div`
     font-family: "Amatic SC", cursive;
     color: ${theme.colors.dark};
     font-size: ${theme.fonts.P4};
+    font-weight: ${theme.weights.semiBold};
     width: 100%;
     margin: 20px 0 0 15%;
+    text-overflow: ellipsis;
   }
   .product-add {
     display: grid;
