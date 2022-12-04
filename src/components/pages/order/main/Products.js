@@ -4,17 +4,17 @@ import { fakeMenu2 } from "../../../../fakeData/fakeMenu";
 import { formatPrice } from "../../../../utils/math";
 import Card from "../../../reusable-ui/Card";
 
-export default function Product() {
-  const [cards, setCards] = useState(fakeMenu2);
+export default function Products() {
+  const [productCards, setProductCards] = useState(fakeMenu2);
 
   return (
     <ProductStyled>
-      {cards.map(({ imageSource, title, price }) => (
+      {productCards.map(({ imageSource, title, price }) => (
         <Card
           imageSource={imageSource}
           title={title}
           price={formatPrice(price)}
-          label={"ajouter"}
+          label={"Ajouter"}
         ></Card>
       ))}
     </ProductStyled>

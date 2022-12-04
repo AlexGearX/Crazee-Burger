@@ -11,7 +11,7 @@ export default function Card({ imageSource, title, price, label }) {
       </div>
 
       <span>{title}</span>
-      <div className="product-add">
+      <div className="product-info">
         <p>{price}</p>
         <PrimaryButton className={"add-button"} label={label} />
       </div>
@@ -48,7 +48,7 @@ const CardStyled = styled.div`
     margin: 20px 0 0 15%;
     text-overflow: ellipsis;
   }
-  .product-add {
+  .product-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: -20px;

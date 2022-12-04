@@ -26,12 +26,11 @@ const NavbarStyled = styled.div`
   background: ${theme.colors.white};
   box-shadow: -1px 9px 13px -1px rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid ${theme.colors.greyLight};
-
+  margin-left: -140px;
   height: 10vh;
   .logo {
     cursor: pointer;
     margin: 0;
     transform: scale(0.45);
-    margin-left: -140px;
   }
 `;

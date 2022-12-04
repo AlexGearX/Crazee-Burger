@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Basket from "./Basket";
-import Product from "./Product";
+import Products from "./Products";
 
 export default function Main() {
   return (
     <MainStyled>
       {/* <Basket /> */}
-      <Product />
+      <Products />
     </MainStyled>
   );
 }
