@@ -9,11 +9,12 @@ export default function Products() {
 
   return (
     <ProductStyled>
-      {menu.map(({ imageSource, title, price }) => (
+      {menu.map(({ id, imageSource, title, price }) => (
         <Card
+          key={id}
           imageSource={imageSource}
           title={title}
-          price={formatPrice(price)}
+          leftDescription={formatPrice(price)}
           label={"Ajouter"}
         ></Card>
       ))}

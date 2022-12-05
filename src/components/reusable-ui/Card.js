@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { theme } from "../../theme";
 import PrimaryButton from "./buttons/PrimaryButton";
 
-export default function Card({ imageSource, title, price, label }) {
+export default function Card({ imageSource, title, leftDescription, label }) {
   return (
     <CardStyled>
       <div className="img-container">
@@ -12,7 +12,7 @@ export default function Card({ imageSource, title, price, label }) {
 
       <span>{title}</span>
       <div className="product-info">
-        <p>{price}</p>
+        <p>{leftDescription}</p>
         <PrimaryButton className={"add-button"} label={label} />
       </div>
     </CardStyled>
