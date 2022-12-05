@@ -5,11 +5,11 @@ import { formatPrice } from "../../../../utils/math";
 import Card from "../../../reusable-ui/Card";
 
 export default function Products() {
-  const [productCards, setProductCards] = useState(fakeMenu2);
+  const [menu, setMenu] = useState(fakeMenu2);
 
   return (
     <ProductStyled>
-      {productCards.map(({ imageSource, title, price }) => (
+      {menu.map(({ imageSource, title, price }) => (
         <Card
           imageSource={imageSource}
           title={title}
