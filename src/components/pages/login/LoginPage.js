@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import LoginForm from "./LoginForm";
-import background from "../../../assets/images/login/F03burger-background.jpg";
 import Logo from "../../reusable-ui/Logo";
 
 export default function LoginPage() {
@@ -25,7 +24,7 @@ const LoginPageStyled = styled.div`
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: url(${background}) rgba(0, 0, 0, 0.7);
+    background: url("/images/burger-and-fries-background.jpg") rgba(0, 0, 0, 0.7);
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;

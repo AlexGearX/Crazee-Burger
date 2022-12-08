@@ -13,48 +13,44 @@ export default function Profile({ name }) {
         </h3>
         <Link to="/">Se déconnecter</Link>
       </div>
-      <IoPersonCircleOutline className="icon" size={40} color={theme.colors.greyDark} />
+      <IoPersonCircleOutline size={50} color={theme.colors.greyDark} />
     </ProfileStyled>
   );
 }
 const ProfileStyled = styled.div`
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-right: 70px;
-  margin-bottom: 20px;
-  h3 {
-    font-family: "Open Sans", sans-serif;
-    text-align: center;
-    font-size: ${theme.fonts.P0};
-    font-weight: ${theme.weights.medium};
-    color: ${theme.colors.greyBlue};
-    margin-bottom: 5px;
-    margin-left: 25px;
-    span {
-      color: ${theme.colors.primary};
-      font-weight: ${theme.weights.bold};
-    }
+  height: 10vh;
   }
-  a {
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 5px 20px 0;
+    h3 {
+      font-family: "Open Sans", sans-serif;
+      font-size: ${theme.fonts.P1};
+      font-weight: ${theme.weights.medium};
+      color: ${theme.colors.greyBlue};
+      margin-bottom: 5px;
+      span {
+        color: ${theme.colors.primary};
+        font-weight: ${theme.weights.bold};
+      }
+    }  
+    a {
     cursor: pointer;
     text-decoration: none;
     background-color: transparent;
     border: 0px;
     font-family: "Open Sans", sans-serif;
-    font-size: ${theme.fonts.XXS};
+    font-size: ${theme.fonts.XS};
     font-weight: ${theme.weights.medium};
     color: ${theme.colors.greyDark};
     &:hover {
       text-decoration: underline ${theme.colors.dark};
     }
-  }
-  .user-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-right: 5px;
-  }
-  .icon {
-    margin-top: 15px;
   }
 `;

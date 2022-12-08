@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../theme";
 
-export default function PrimaryButton({ label, icon }) {
+export default function PrimaryButton({ label, icon, className }) {
   return (
-    <PrimaryButtonStyled>
+    <PrimaryButtonStyled className={className}>
       {label}
       {icon}
     </PrimaryButtonStyled>
@@ -12,16 +12,16 @@ export default function PrimaryButton({ label, icon }) {
 }
 
 const PrimaryButtonStyled = styled.button`
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
   height: 50px;
   width: 380px;
 
+  border: 1px solid ${theme.colors.primary};
   border-radius: ${theme.borderRadius.round};
-  border: 1px solid black;
 
   font-size: ${theme.fonts.p0};
   font-weight: ${theme.weights.semiBold};
@@ -33,6 +33,7 @@ const PrimaryButtonStyled = styled.button`
     content: "";
     background-color: ${theme.colors.white};
     color: ${theme.colors.primary};
+    transition: 0.3s;
     border: 1px solid ${theme.colors.primary};
   }
   :active {
