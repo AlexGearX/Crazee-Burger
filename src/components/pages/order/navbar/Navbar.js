@@ -32,9 +32,4 @@ const NavbarStyled = styled.div`
     margin-left: -140px;
     transform: scale(0.45);
   }
-  .right-navbar {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 50px;
-  }
 `;

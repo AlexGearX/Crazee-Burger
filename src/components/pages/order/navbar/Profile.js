@@ -23,6 +23,7 @@ const ProfileStyled = styled.div`
   align-items: center;
   margin-right: 70px;
   height: 10vh;
+  padding-left: 50px;
   }
   .user-info {
     display: flex;

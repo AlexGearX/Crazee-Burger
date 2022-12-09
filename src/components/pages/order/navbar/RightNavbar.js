@@ -30,9 +30,6 @@ export default function RightNavbar({ name }) {
 }
 
 const RightNavbarStyled = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
+  display: flex;
   align-items: center;
-  grid-column-gap: 50px;
 `;
