@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components/macro";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { theme } from "../../theme";
 
 export default function ToggleButton({
@@ -27,7 +25,6 @@ export default function ToggleButton({
         data-checked={labelIfChecked}
         data-unchecked={labelIfUnchecked}
       ></label>
-      <ToastContainer className="toaster" bodyClassName="body-toast" />
     </ToggleButtonStyled>
   );
 }
@@ -120,23 +117,6 @@ const ToggleButtonStyled = styled.div`
     &.toggle:checked + label:before {
       left: 162px;
       background-color: ${theme.colors.primary};
-    }
-  }
-  .toaster {
-    max-width: 300px;
-  }
-
-  .Toastify__toast.Toastify__toast-theme--dark.Toastify__toast--info {
-    background: ${theme.colors.background_dark};
-  }
-
-  .body-toast {
-    .Toastify__toast-icon.Toastify--animate-icon.Toastify__zoom-enter {
-      margin-right: 20px;
-      margin-left: 5px;
-    }
-    div {
-      line-height: 1.3em;
     }
   }
 `;
