@@ -7,7 +7,7 @@ import Profile from "./Profile";
 export default function RightNavbar({ name }) {
   const [toggleAdminIsChecked, setToggleAdminIsChecked] = useState(false);
   const handleToggle = () => setToggleAdminIsChecked(!toggleAdminIsChecked);
-  const toastify = () => {
+  const setToast = () => {
     if (!toggleAdminIsChecked) {
       toast.info("Mode admin activé", {
         theme: "dark",
@@ -23,13 +23,7 @@ export default function RightNavbar({ name }) {
   };
   return (
     <RightNavbarStyled>
-      <ToggleButton
-        isChecked={toggleAdminIsChecked}
-        onClick={toastify}
-        onToggle={handleToggle}
-        labelIfChecked="Désactiver le mode admin"
-        labelIfUnchecked="Activer le mode admin"
-      />
+      <ToggleButton isChecked={toggleAdminIsChecked} onClick={setToast} onToggle={handleToggle} />
       <Profile name={name} />
     </RightNavbarStyled>
   );

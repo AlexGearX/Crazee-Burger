@@ -27,7 +27,7 @@ export default function ToggleButton({
         data-checked={labelIfChecked}
         data-unchecked={labelIfUnchecked}
       ></label>
-      <ToastContainer />
+      <ToastContainer className="toaster" bodyClassName="body-toast" />
     </ToggleButtonStyled>
   );
 }
@@ -96,7 +96,7 @@ const ToggleButtonStyled = styled.div`
       left: auto;
       opacity: 1;
       color: ${theme.colors.primary};
-      font-weight: ${theme.fonts.bold};
+      font-weight: ${theme.weights.bold};
     }
     // small circle when not checked
     &.toggle:not(:checked) + label:before {
@@ -121,6 +121,23 @@ const ToggleButtonStyled = styled.div`
     &.toggle:checked + label:before {
       left: 162px;
       background-color: ${theme.colors.primary};
+    }
+  }
+  .toaster {
+    max-width: 300px;
+  }
+
+  .Toastify__toast.Toastify__toast-theme--dark.Toastify__toast--info {
+    background: ${theme.colors.background_dark};
+  }
+
+  .body-toast {
+    .Toastify__toast-icon.Toastify--animate-icon.Toastify__zoom-enter {
+      margin-right: 20px;
+      margin-left: 5px;
+    }
+    div {
+      line-height: 1.3em;
     }
   }
 `;
