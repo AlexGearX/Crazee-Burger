@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../../theme";
+import ReloadPage from "../../../../utils/windows";
 import Logo from "../../../reusable-ui/Logo";
 import RightNavbar from "./RightNavbar";
 
 export default function Navbar({ name }) {
-  const reloadPage = () => window.location.reload(false);
+  const reloadPage = () => ReloadPage();
   return (
     <NavbarStyled>
       <Logo className="logo" onClick={reloadPage} />
