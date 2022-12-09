@@ -1,16 +1,34 @@
 import React from "react";
 import styled from "styled-components/macro";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { theme } from "../../theme";
 
 export default function ToggleButton({
   isChecked,
   onToggle,
-  labelIfChecked = "Fermer",
-  labelIfUnchecked = "Ouvrir",
+  labelIfChecked = "DÉSACTIVER LE MODE ADMIN",
+  labelIfUnchecked = "ACTIVER LE MODE ADMIN",
 }) {
+  const toastify = () => {
+    if (!isChecked) {
+      toast.info("Mode admin activé", {
+        theme: "dark",
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  };
+
   return (
     <ToggleButtonStyled>
       <input
+        onClick={toastify}
         type="checkbox"
         className="toggle"
         id="rounded"
@@ -23,13 +41,13 @@ export default function ToggleButton({
         data-checked={labelIfChecked}
         data-unchecked={labelIfUnchecked}
       ></label>
+      <ToastContainer />
     </ToggleButtonStyled>
   );
 }
 
 const ToggleButtonStyled = styled.div`
   /* border: 1px solid red; */
-
   display: flex;
   margin-right: 10px;
   input[type="checkbox"] {
@@ -37,7 +55,6 @@ const ToggleButtonStyled = styled.div`
     &.toggle {
       display: none;
     }
-
     &.toggle + label {
       display: inline-block;
       height: 40px;
@@ -52,7 +69,6 @@ const ToggleButtonStyled = styled.div`
       box-sizing: border-box;
       transition: all 500ms ease;
     }
-
     // the small round circle
     &.toggle + label:before {
       content: "";
@@ -63,7 +79,6 @@ const ToggleButtonStyled = styled.div`
       transition: all 500ms ease;
       z-index: 3;
     }
-
     // text inside the switch button (for checked and unchecked)
     &.toggle + label:after {
       /* border: 1px solid blue; */
@@ -77,22 +92,18 @@ const ToggleButtonStyled = styled.div`
       text-overflow: ellipsis;
       overflow: hidden;
     }
-
     // outside box
     &.toggle + label.rounded {
       border-radius: 30px;
     }
-
     // small circle
     &.toggle + label.rounded:before {
       border-radius: 50%;
     }
-
     &.toggle:not(:checked) + label {
       background-color: ${theme.colors.background_dark};
       /* text-align: right; */
     }
-
     // text label when not checked
     &.toggle:not(:checked) + label:after {
       content: attr(data-unchecked);
@@ -100,21 +111,18 @@ const ToggleButtonStyled = styled.div`
       left: auto;
       opacity: 1;
       color: ${theme.colors.primary};
-      font-weight: ${theme.weights.bold};
+      font-weight: ${theme.fonts.bold};
     }
-
     // small circle when not checked
     &.toggle:not(:checked) + label:before {
       left: 3px;
       background-color: ${theme.colors.primary};
     }
-
     // box container when checked
     &.toggle:checked + label {
       text-align: left;
       border-color: ${theme.colors.primary};
     }
-
     // label text when checked
     &.toggle:checked + label:after {
       content: attr(data-checked);
@@ -124,7 +132,6 @@ const ToggleButtonStyled = styled.div`
       color: ${theme.colors.dark};
       letter-spacing: 0px;
     }
-
     // small circle when checked
     &.toggle:checked + label:before {
       left: 162px;

@@ -25,10 +25,10 @@ const NavbarStyled = styled.div`
   box-shadow: -1px 9px 13px -1px rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid ${theme.colors.greyLight};
   height: 10vh;
-  padding-left: -140px;
   .logo {
     cursor: pointer;
     margin: 0;
+    margin-left: -140px;
     transform: scale(0.45);
   }
   .right-navbar {
