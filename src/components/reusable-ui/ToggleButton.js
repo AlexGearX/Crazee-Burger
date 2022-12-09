@@ -4,7 +4,6 @@ import { theme } from "../../theme";
 
 export default function ToggleButton({
   isChecked,
-  onClick,
   onToggle,
   labelIfChecked = "DÉSACTIVER LE MODE ADMIN",
   labelIfUnchecked = "ACTIVER LE MODE ADMIN",
@@ -12,7 +11,6 @@ export default function ToggleButton({
   return (
     <ToggleButtonStyled>
       <input
-        onClick={onClick}
         type="checkbox"
         className="toggle"
         id="rounded"

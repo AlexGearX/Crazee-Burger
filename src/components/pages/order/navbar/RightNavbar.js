@@ -7,10 +7,9 @@ import ToggleButton from "../../../reusable-ui/ToggleButton";
 import Profile from "./Profile";
 
 export default function RightNavbar({ name }) {
-  const [toggleAdminIsChecked, setToggleAdminIsChecked] = useState(false);
-  const handleToggle = () => setToggleAdminIsChecked(!toggleAdminIsChecked);
-  const setToast = () => {
-    if (!toggleAdminIsChecked) {
+  const [isModeAdmin, setIsModeAdmin] = useState(false);
+  const DisplayToast = () => {
+    if (!isModeAdmin) {
       toast.info("Mode admin activé", {
         theme: "dark",
         position: "bottom-right",
@@ -22,10 +21,11 @@ export default function RightNavbar({ name }) {
         progress: undefined,
       });
     }
+    setIsModeAdmin(!isModeAdmin);
   };
   return (
     <RightNavbarStyled>
-      <ToggleButton isChecked={toggleAdminIsChecked} onClick={setToast} onToggle={handleToggle} />
+      <ToggleButton isChecked={isModeAdmin} onToggle={DisplayToast} />
       <Profile name={name} />
       <ToastContainer className="toaster" bodyClassName="body-toast" />
     </RightNavbarStyled>
