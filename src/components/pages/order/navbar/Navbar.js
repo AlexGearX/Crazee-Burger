@@ -1,28 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../../theme";
 import Logo from "../../../reusable-ui/Logo";
-import Profile from "./Profile";
-import ToggleButton from "../../../reusable-ui/ToggleButton";
+import RightNavbar from "./RightNavbar";
 
 export default function Navbar({ name }) {
   const reloadPage = () => window.location.reload(false);
-
-  const [toggleAdminIsChecked, setToggleAdminIsChecked] = useState(false);
-  const handleToggle = () => setToggleAdminIsChecked(!toggleAdminIsChecked);
-
   return (
     <NavbarStyled>
       <Logo className="logo" onClick={reloadPage} />
-      <div className="right-navbar">
-        <ToggleButton
-          isChecked={toggleAdminIsChecked}
-          onToggle={handleToggle}
-          labelIfChecked="Désactiver le mode admin"
-          labelIfUnchecked="Activer le mode admin"
-        />
-        <Profile name={name} />
-      </div>
+      <RightNavbar name={name} />
     </NavbarStyled>
   );
 }
