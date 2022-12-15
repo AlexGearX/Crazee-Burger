@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../theme";
 
-export default function PrimaryButton({ label, icon, className }) {
+export default function PrimaryButton({ label, icon, className, showIconBeforeLabel = false }) {
   return (
     <PrimaryButtonStyled className={className}>
+      {showIconBeforeLabel ? icon : null}
       {label}
-      {icon}
+      {showIconBeforeLabel ? null : icon}
     </PrimaryButtonStyled>
   );
 }
