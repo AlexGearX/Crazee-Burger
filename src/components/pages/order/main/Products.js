@@ -31,7 +31,6 @@ const ProductStyled = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 50px 50px 150px;
   gap: 60px 0;
-
   overflow-y: auto;
 
   ::-webkit-scrollbar {
