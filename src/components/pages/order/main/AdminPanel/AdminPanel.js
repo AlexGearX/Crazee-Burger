@@ -14,7 +14,7 @@ export default function AdminPanel() {
   return (
     <AdminPanelStyled>
       <div className={`${isModeAdmin ? "panel-open" : "panel-close"}`}>
-        <AdminPanelTab setAdminContent={setAdminContent} />
+        <AdminPanelTab setAdminContent={setAdminContent} adminContent={adminContent} />
         <AdminPanelContent adminPanelContent={adminContent} />
       </div>
     </AdminPanelStyled>

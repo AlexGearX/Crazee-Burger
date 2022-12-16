@@ -5,7 +5,13 @@ import { IoIosArrowDown } from "react-icons/io";
 import { MdEdit } from "react-icons/md";
 import SecondaryButton from "../../../../reusable-ui/buttons/SecondaryButton";
 
-export default function AdminPanelTab({ setAdminContent }) {
+export default function AdminPanelTab({ setAdminContent, adminContent }) {
+  console.log(adminContent.collapse);
+  const collapse = () => {
+    if (adminContent.collapse) {
+      return false;
+    }
+  };
   const panelTabsConfig = [
     {
       id: 1,
@@ -13,7 +19,7 @@ export default function AdminPanelTab({ setAdminContent }) {
       onClick: () =>
         setAdminContent({
           content: "",
-          collapse: true,
+          collapse: !adminContent.collapse,
         }),
       icon: <IoIosArrowDown />,
       label: "",
@@ -24,7 +30,7 @@ export default function AdminPanelTab({ setAdminContent }) {
       onClick: () =>
         setAdminContent({
           content: "Ajouter un produit",
-          collapse: false,
+          collapse: collapse(),
         }),
       icon: <BsPlus />,
       label: "Ajouter un produit",
@@ -35,7 +41,7 @@ export default function AdminPanelTab({ setAdminContent }) {
       onClick: () =>
         setAdminContent({
           content: "Modifier un produit",
-          collapse: false,
+          collapse: collapse(),
         }),
       icon: <MdEdit />,
       label: "Modifier un produit",

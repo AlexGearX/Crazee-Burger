@@ -3,7 +3,6 @@ import { theme } from "../../../../../theme";
 import styled from "styled-components";
 
 export default function AdminPanelContent({ adminPanelContent }) {
-  console.log(adminPanelContent.collapse ? "content-collapse" : "content-show");
   return (
     <AdminPanelContentStyled>
       <div className={`${adminPanelContent.collapse ? "content-collapse" : "content-show"}`}>
