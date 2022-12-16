@@ -10,31 +10,38 @@ export default function AdminPanelTab({ setAdminContent }) {
     {
       id: 1,
       className: "button-collaps",
-      onClick: () => {
-        setAdminContent("Close");
-      },
+      onClick: () =>
+        setAdminContent({
+          content: "",
+          collapse: true,
+        }),
       icon: <IoIosArrowDown />,
       label: "",
     },
     {
       id: 2,
       className: "button-add-product",
-      onClick: () => {
-        setAdminContent("Ajouter un produit");
-      },
+      onClick: () =>
+        setAdminContent({
+          content: "Ajouter un produit",
+          collapse: false,
+        }),
       icon: <BsPlus />,
       label: "Ajouter un produit",
     },
     {
       id: 3,
       className: "button-edit-product",
-      onClick: () => {
-        setAdminContent("Modifier un produit");
-      },
+      onClick: () =>
+        setAdminContent({
+          content: "Modifier un produit",
+          collapse: false,
+        }),
       icon: <MdEdit />,
       label: "Modifier un produit",
     },
   ];
+
   return (
     <AdminPanelNavStyled>
       {panelTabsConfig.map(({ id, className, onClick, icon, label }) => (

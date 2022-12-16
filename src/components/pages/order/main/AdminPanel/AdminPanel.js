@@ -6,13 +6,16 @@ import { useContext } from "react";
 import AdminPanelContext from "../../../../../context/AdminPanelContext";
 
 export default function AdminPanel() {
-  const [adminContent, setAdminContent] = useState("Ajouter un produit");
+  const [adminContent, setAdminContent] = useState({
+    content: "Ajouter un produit",
+    collapse: false,
+  });
   const { isModeAdmin } = useContext(AdminPanelContext);
   return (
     <AdminPanelStyled>
       <div className={`${isModeAdmin ? "panel-open" : "panel-close"}`}>
         <AdminPanelTab setAdminContent={setAdminContent} />
-        <AdminPanelContent testLabel={adminContent} />
+        <AdminPanelContent adminPanelContent={adminContent} />
       </div>
     </AdminPanelStyled>
   );
