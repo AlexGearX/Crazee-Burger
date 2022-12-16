@@ -5,7 +5,7 @@ import { theme } from "../../../theme";
 export default function SecondaryButton({ onClick, label, icon, className }) {
   return (
     <SecondaryButtonStyled className={className} onClick={onClick}>
-      {icon}
+      <div className="icon">{icon}</div>
       {label}
     </SecondaryButtonStyled>
   );
@@ -14,7 +14,7 @@ export default function SecondaryButton({ onClick, label, icon, className }) {
 const SecondaryButtonStyled = styled.button`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 
   font-size: ${theme.fonts.P0};
@@ -30,15 +30,15 @@ const SecondaryButtonStyled = styled.button`
   margin-right: 1px;
 
   cursor: pointer;
-  :focus {
-    background-color: ${theme.colors.background_dark};
-    text-decoration: underline ${theme.colors.white};
-    color: ${theme.colors.white};
-  }
 
   :hover {
     text-decoration: underline ${theme.colors.dark};
     border-bottom: 1px solid ${theme.colors.white};
     background-color: ${theme.colors.white};
+  }
+
+  .icon {
+    font-size: ${theme.fonts.P2};
+    padding-top: 5px;
   }
 `;

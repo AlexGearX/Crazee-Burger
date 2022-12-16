@@ -1,21 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { BsPlus } from "react-icons/bs";
+import { BsPlusLg } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
 import { MdEdit } from "react-icons/md";
 import SecondaryButton from "../../../../reusable-ui/buttons/SecondaryButton";
+import { theme } from "../../../../../theme";
 
 export default function AdminPanelTab({ setAdminContent, adminContent }) {
-  console.log(adminContent.collapse);
+  const [activeContent, setActiveContent] = useState(1);
   const collapse = () => {
     if (adminContent.collapse) {
       return false;
     }
   };
+
+  const collapseStyle = () => {
+    if (adminContent.collapse) {
+      return "button-collaps-active";
+    } else {
+      return "button-collaps";
+    }
+  };
+  const activeStyle = (id) => {
+    if (activeContent === id) {
+      return "button-active";
+    } else {
+      return "";
+    }
+  };
   const panelTabsConfig = [
     {
       id: 1,
-      className: "button-collaps",
+      className: collapseStyle(),
       onClick: () =>
         setAdminContent({
           content: "",
@@ -26,28 +42,31 @@ export default function AdminPanelTab({ setAdminContent, adminContent }) {
     },
     {
       id: 2,
-      className: "button-add-product",
-      onClick: () =>
+      className: activeStyle(2),
+      onClick: () => {
         setAdminContent({
           content: "Ajouter un produit",
           collapse: collapse(),
-        }),
-      icon: <BsPlus />,
+        });
+        setActiveContent(2);
+      },
+      icon: <BsPlusLg />,
       label: "Ajouter un produit",
     },
     {
       id: 3,
-      className: "button-edit-product",
-      onClick: () =>
+      className: activeStyle(3),
+      onClick: () => {
         setAdminContent({
           content: "Modifier un produit",
           collapse: collapse(),
-        }),
+        });
+        setActiveContent(3);
+      },
       icon: <MdEdit />,
       label: "Modifier un produit",
     },
   ];
-
   return (
     <AdminPanelNavStyled>
       {panelTabsConfig.map(({ id, className, onClick, icon, label }) => (
@@ -67,7 +86,32 @@ const AdminPanelNavStyled = styled.div`
   display: flex;
   flex-direction: row;
   padding-left: 44px;
+  .button-collaps-active {
+    width: 54px;
+    background-color: ${theme.colors.background_dark};
+    color: ${theme.colors.white};
+    border-radius: 0 0 ${theme.borderRadius.round} ${theme.borderRadius.round};
+    transform: rotate(180deg);
+    :hover {
+      text-decoration: underline ${theme.colors.white};
+      border-bottom: 1px solid ${theme.colors.white};
+      background-color: ${theme.colors.background_dark};
+      color: ${theme.colors.white};
+    }
+  }
+
   .button-collaps {
     width: 54px;
+  }
+
+  .button-active {
+    background-color: ${theme.colors.background_dark};
+    color: ${theme.colors.white};
+    :hover {
+      text-decoration: underline ${theme.colors.white};
+      border-bottom: 1px solid ${theme.colors.white};
+      background-color: ${theme.colors.background_dark};
+      color: ${theme.colors.white};
+    }
   }
 `;
