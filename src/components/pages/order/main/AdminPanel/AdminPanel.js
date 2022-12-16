@@ -24,7 +24,7 @@ export default function AdminPanel() {
 const AdminPanelStyled = styled.div`
   overflow: hidden;
   position: absolute;
-  width: 100%;
+  width: 75%;
   bottom: 0px;
   right: 0;
   z-index: 2;

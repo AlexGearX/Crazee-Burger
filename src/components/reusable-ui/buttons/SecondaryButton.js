@@ -17,6 +17,7 @@ const SecondaryButtonStyled = styled.button`
   justify-content: space-evenly;
   align-items: center;
 
+  font-family: "Open Sans", sans-serif;
   font-size: ${theme.fonts.P0};
   font-weight: ${theme.weights.semiBold};
   background: ${theme.colors.white};
@@ -25,8 +26,8 @@ const SecondaryButtonStyled = styled.button`
   font-weight: ${theme.weights.medium};
   border-radius: ${theme.borderRadius.round} ${theme.borderRadius.round} 0 0;
   color: ${theme.colors.greyMedium};
-  height: 36px;
-  width: 180px;
+  height: 40px;
+  width: 190px;
   margin-right: 1px;
 
   cursor: pointer;

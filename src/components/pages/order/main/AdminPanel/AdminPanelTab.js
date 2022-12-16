@@ -8,17 +8,11 @@ import { theme } from "../../../../../theme";
 
 export default function AdminPanelTab({ setAdminContent, adminContent }) {
   const [activeContent, setActiveContent] = useState(1);
-  const collapse = () => {
-    if (adminContent.collapse) {
-      return false;
-    }
-  };
-
   const collapseStyle = () => {
     if (adminContent.collapse) {
-      return "button-collaps-active";
+      return "button-collaps-active button-active";
     } else {
-      return "button-collaps";
+      return "button-collaps button-active";
     }
   };
   const activeStyle = (id) => {
@@ -67,6 +61,12 @@ export default function AdminPanelTab({ setAdminContent, adminContent }) {
       label: "Modifier un produit",
     },
   ];
+  const collapse = () => {
+    if (adminContent.collapse) {
+      return false;
+    }
+  };
+
   return (
     <AdminPanelNavStyled>
       {panelTabsConfig.map(({ id, className, onClick, icon, label }) => (
@@ -87,21 +87,13 @@ const AdminPanelNavStyled = styled.div`
   flex-direction: row;
   padding-left: 44px;
   .button-collaps-active {
-    width: 54px;
-    background-color: ${theme.colors.background_dark};
-    color: ${theme.colors.white};
+    width: 60px;
     border-radius: 0 0 ${theme.borderRadius.round} ${theme.borderRadius.round};
     transform: rotate(180deg);
-    :hover {
-      text-decoration: underline ${theme.colors.white};
-      border-bottom: 1px solid ${theme.colors.white};
-      background-color: ${theme.colors.background_dark};
-      color: ${theme.colors.white};
-    }
   }
 
   .button-collaps {
-    width: 54px;
+    width: 60px;
   }
 
   .button-active {
