@@ -1,9 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import { theme } from "../../../../../theme";
+import styled from "styled-components";
 
-export default function AdminPanelContent() {
-  return <AdminPanelContentStyled>AdminPanelContent</AdminPanelContentStyled>;
+export default function AdminPanelContent({ testLabel }) {
+  return <AdminPanelContentStyled>{testLabel}</AdminPanelContentStyled>;
 }
 const AdminPanelContentStyled = styled.div`
   background: ${theme.colors.white};

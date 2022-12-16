@@ -8,6 +8,7 @@ import Profile from "./Profile";
 
 export default function RightNavbar({ name }) {
   const [isModeAdmin, setIsModeAdmin] = useState(false);
+
   const DisplayToast = () => {
     if (!isModeAdmin) {
       toast.info("Mode admin activé", {
