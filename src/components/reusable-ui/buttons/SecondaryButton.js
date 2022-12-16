@@ -19,9 +19,9 @@ const SecondaryButtonStyled = styled.button`
 
   font-size: ${theme.fonts.P0};
   font-weight: ${theme.weights.semiBold};
-
+  background: ${theme.colors.white};
+  border: 1px solid ${theme.colors.greyLight};
   color: ${theme.colors.white};
-  background-color: ${theme.colors.primary};
   font-weight: ${theme.weights.medium};
   border-radius: ${theme.borderRadius.round} ${theme.borderRadius.round} 0 0;
   color: ${theme.colors.greyMedium};

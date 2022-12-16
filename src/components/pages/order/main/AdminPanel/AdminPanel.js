@@ -2,25 +2,54 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import AdminPanelContent from "./AdminPanelContent";
 import AdminPanelTab from "./AdminPanelTab";
-import { LARGEUR_MENU } from "../Main";
+import { useContext } from "react";
+import AdminPanelContext from "../../../../../context/AdminPanelContext";
 
 export default function AdminPanel() {
-  const [state, setState] = useState("Ajouter un produit");
+  const [adminContent, setAdminContent] = useState("Ajouter un produit");
+  const { isModeAdmin } = useContext(AdminPanelContext);
   return (
     <AdminPanelStyled>
-      <AdminPanelTab stateChanger={setState} />
-      <AdminPanelContent testLabel={state} />
+      <div className={`${isModeAdmin ? "panel-open" : "panel-close"}`}>
+        <AdminPanelTab setAdminContent={setAdminContent} />
+        <AdminPanelContent testLabel={adminContent} />
+      </div>
     </AdminPanelStyled>
   );
 }
 
 const AdminPanelStyled = styled.div`
+  overflow: hidden;
   position: absolute;
-  width: ${LARGEUR_MENU};
-  height: 300px;
+  width: 100%;
   bottom: 0px;
-  /* height: 0px;
-  bottom: 35px; */
   right: 0;
   z-index: 2;
+  .panel-close {
+    animation: slideOut 0.5s;
+    visibility: hidden;
+    transition: visibility 0.5s;
+  }
+  .panel-open {
+    display: block;
+    animation: slideIn 0.5s;
+  }
+  @keyframes slideIn {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes slideOut {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
 `;

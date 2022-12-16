@@ -1,20 +1,29 @@
 import React from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import AdminPanelContext from "../../../context/AdminPanelContext";
 import { theme } from "../../../theme";
 import Main from "./Main/Main";
 import Navbar from "./Navbar/Navbar";
 
 export default function OrderPage() {
   const { name } = useParams();
+  const [isModeAdmin, setIsModeAdmin] = useState(false);
+  const isModeAdminContextValue = {
+    isModeAdmin,
+    setIsModeAdmin,
+  };
 
   return (
-    <OrderPageStyled>
-      <div className="container">
-        <Navbar name={name} />
-        <Main />
-      </div>
-    </OrderPageStyled>
+    <AdminPanelContext.Provider value={isModeAdminContextValue}>
+      <OrderPageStyled>
+        <div className="container">
+          <Navbar name={name} />
+          <Main />
+        </div>
+      </OrderPageStyled>
+    </AdminPanelContext.Provider>
   );
 }
 

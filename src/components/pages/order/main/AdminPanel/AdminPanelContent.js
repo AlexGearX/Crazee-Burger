@@ -7,5 +7,5 @@ export default function AdminPanelContent({ testLabel }) {
 }
 const AdminPanelContentStyled = styled.div`
   background: ${theme.colors.white};
-  height: 88%;
+  height: 300px;
 `;
