@@ -7,12 +7,12 @@ import SecondaryButton from "../../../../reusable-ui/buttons/SecondaryButton";
 import { theme } from "../../../../../theme";
 
 export default function AdminPanelTab({ setAdminContent, adminContent }) {
-  const [activeContent, setActiveContent] = useState(1);
+  const [activeContent, setActiveContent] = useState(2);
   const collapseStyle = () => {
     if (adminContent.collapse) {
       return "button-collaps-active button-active";
     } else {
-      return "button-collaps button-active";
+      return "button-collaps";
     }
   };
   const activeStyle = (id) => {
