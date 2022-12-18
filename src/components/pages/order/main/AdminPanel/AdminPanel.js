@@ -24,7 +24,8 @@ export default function AdminPanel() {
 const AdminPanelStyled = styled.div`
   overflow: hidden;
   position: absolute;
-  width: 75%;
+  /* width: 75%; Quand il y aura le Panier*/
+  width: 100%;
   bottom: 0px;
   right: 0;
   z-index: 2;
