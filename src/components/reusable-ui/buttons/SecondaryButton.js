@@ -33,7 +33,7 @@ const SecondaryButtonStyled = styled.button`
   cursor: pointer;
 
   :hover {
-    text-decoration: underline ${theme.colors.dark};
+    text-decoration: underline ${theme.colors.greyDark};
     border-bottom: 1px solid ${theme.colors.white};
     background-color: ${theme.colors.white};
   }
