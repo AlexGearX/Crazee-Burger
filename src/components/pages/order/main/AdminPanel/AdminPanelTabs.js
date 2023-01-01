@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import SecondaryButton from "../../../../reusable-ui/buttons/SecondaryButton";
 import { theme } from "../../../../../theme";
-import PanelTabsConfig from "./PanelTabsConfig";
+import panelTabsConfig from "./panelTabsConfig";
 
-export default function AdminPanelTab({ setAdminContent, adminContent }) {
-  const panelTabsConfig = PanelTabsConfig({ setAdminContent, adminContent });
+export default function AdminPanelTabs({ setAdminContent, adminContent }) {
+  const panelTabsConfigUpdated = panelTabsConfig({ setAdminContent, adminContent });
 
   return (
     <AdminPanelNavStyled>
-      {panelTabsConfig.map(({ id, className, onClick, icon, label }) => (
+      {panelTabsConfigUpdated.map(({ id, className, onClick, icon, label }) => (
         <SecondaryButton
           key={id}
           className={className}
