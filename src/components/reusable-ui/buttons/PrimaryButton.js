@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../theme";
 
-export default function PrimaryButton({ label, icon, className }) {
+export default function PrimaryButton({ onClick, label, icon, className }) {
   return (
-    <PrimaryButtonStyled className={className}>
+    <PrimaryButtonStyled className={className} onClick={onClick}>
       {label}
       {icon}
     </PrimaryButtonStyled>
@@ -23,7 +23,7 @@ const PrimaryButtonStyled = styled.button`
   border: 1px solid ${theme.colors.primary};
   border-radius: ${theme.borderRadius.round};
 
-  font-size: ${theme.fonts.p0};
+  font-size: ${theme.fonts.P0};
   font-weight: ${theme.weights.semiBold};
 
   color: ${theme.colors.white};

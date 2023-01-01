@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { fakeMenu2 } from "../../../../fakeData/fakeMenu";
 import { formatPrice } from "../../../../utils/math";
 import Card from "../../../reusable-ui/Card";
+import AdminPanel from "./AdminPanel/AdminPanel";
 
 export default function Products() {
   const [menu, setMenu] = useState(fakeMenu2);
@@ -18,6 +19,7 @@ export default function Products() {
           label={"Ajouter"}
         ></Card>
       ))}
+      <AdminPanel />
     </ProductStyled>
   );
 }
@@ -29,8 +31,8 @@ const ProductStyled = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 50px 50px 150px;
   gap: 60px 0;
-
   overflow-y: auto;
+
   ::-webkit-scrollbar {
     width: 12px;
   }

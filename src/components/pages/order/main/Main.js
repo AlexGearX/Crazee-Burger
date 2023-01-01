@@ -11,10 +11,13 @@ export default function Main() {
     </MainStyled>
   );
 }
+
 const MainStyled = styled.div`
   position: relative;
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
+  display: grid;
+  /* grid-template-columns: 25% 75%; Quand il y aura le panier*/
+  grid-template-rows: auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
   height: calc(84.9vh);
 `;
