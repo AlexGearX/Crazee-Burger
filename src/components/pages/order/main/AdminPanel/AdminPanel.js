@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import AdminPanelContent from "./AdminPanelContent";
-import AdminPanelTab from "./AdminPanelTab";
+import AdminPanelTabs from "./AdminPanelTabs";
 import { useContext } from "react";
 import AdminPanelContext from "../../../../../context/AdminPanelContext";
 
@@ -14,7 +14,7 @@ export default function AdminPanel() {
   return (
     <AdminPanelStyled>
       <div className={`${isModeAdmin ? "panel-open" : "panel-close"}`}>
-        <AdminPanelTab setAdminContent={setAdminContent} adminContent={adminContent} />
+        <AdminPanelTabs setAdminContent={setAdminContent} adminContent={adminContent} />
         <AdminPanelContent adminPanelContent={adminContent} />
       </div>
     </AdminPanelStyled>
