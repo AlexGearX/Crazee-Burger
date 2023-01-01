@@ -27,7 +27,6 @@ const SecondaryButtonStyled = styled.button`
   border-radius: ${theme.borderRadius.round} ${theme.borderRadius.round} 0 0;
   color: ${theme.colors.greyMedium};
   height: 40px;
-  width: 190px;
   margin-right: 1px;
 
   cursor: pointer;
@@ -40,6 +39,6 @@ const SecondaryButtonStyled = styled.button`
 
   .icon {
     font-size: ${theme.fonts.P2};
-    padding-top: 5px;
+    padding: 5px 5px 0 5px;
   }
 `;
