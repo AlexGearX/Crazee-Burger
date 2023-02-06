@@ -4,6 +4,7 @@ import AdminPanelContent from "./AdminPanelContent";
 import AdminPanelTabs from "./AdminPanelTabs";
 import { useContext } from "react";
 import AdminPanelContext from "../../../../../context/AdminPanelContext";
+import { theme } from "../../../../../theme";
 
 export default function AdminPanel() {
   const [adminContent, setAdminContent] = useState({
@@ -29,6 +30,7 @@ const AdminPanelStyled = styled.div`
   bottom: 0px;
   right: 0;
   z-index: 2;
+  border-radius: ${theme.borderRadius.extraRound};
   .panel-close {
     animation: slideOut 0.5s;
     visibility: hidden;

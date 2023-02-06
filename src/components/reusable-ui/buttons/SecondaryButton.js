@@ -5,8 +5,10 @@ import { theme } from "../../../theme";
 export default function SecondaryButton({ onClick, label, icon, className }) {
   return (
     <SecondaryButtonStyled className={className} onClick={onClick}>
-      <div className="icon">{icon}</div>
-      {label}
+      <div className="btn-container">
+        <div className="icon">{icon}</div>
+        {label}
+      </div>
     </SecondaryButtonStyled>
   );
 }
@@ -27,7 +29,14 @@ const SecondaryButtonStyled = styled.button`
   border-radius: ${theme.borderRadius.round} ${theme.borderRadius.round} 0 0;
   color: ${theme.colors.greyMedium};
   height: 40px;
+  padding: 0 15px 0 15px;
   margin-right: 1px;
+
+  .btn-container{
+      display: flex;
+  flex-direction: row;
+  align-items: center;
+  }
 
   cursor: pointer;
 
@@ -39,6 +48,7 @@ const SecondaryButtonStyled = styled.button`
 
   .icon {
     font-size: ${theme.fonts.P2};
-    padding: 5px 5px 0 5px;
+    padding: 5px 10px 0 10px;
   }
+
 `;

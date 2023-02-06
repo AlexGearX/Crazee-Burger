@@ -43,19 +43,21 @@ const AdminPanelNavStyled = styled.div`
   display: flex;
   flex-direction: row;
   padding-left: 44px;
-
   .button-active {
     background-color: ${theme.colors.background_dark};
     color: ${theme.colors.white};
+    border-bottom: 0px solid ${theme.colors.white};
     :hover {
       text-decoration: underline ${theme.colors.white};
-      border-bottom: 1px solid ${theme.colors.white};
       background-color: ${theme.colors.background_dark};
       color: ${theme.colors.white};
     }
   }
   .button-collaps-active {
     border-radius: 0 0 ${theme.borderRadius.round} ${theme.borderRadius.round};
+    border-top: 0px;
     transform: rotate(180deg);
+    margin-top: 1px;
+    height: 39px;
   }
 `;

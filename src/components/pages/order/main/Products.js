@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { fakeMenu2 } from "../../../../fakeData/fakeMenu";
+import { theme } from "../../../../theme";
 import { formatPrice } from "../../../../utils/math";
 import Card from "../../../reusable-ui/Card";
 import AdminPanel from "./AdminPanel/AdminPanel";
@@ -35,15 +36,18 @@ const ProductStyled = styled.div`
 
   ::-webkit-scrollbar {
     width: 12px;
+    border-radius: ${theme.borderRadius.extraRound};
   }
 
   ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    border-radius: ${theme.borderRadius.extraRound};
   }
 
   ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: ${theme.borderRadius.extraRound};
+    
   }
 `;
