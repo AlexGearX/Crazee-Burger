@@ -50,6 +50,7 @@ const AdminPanelNavStyled = styled.div`
     :hover {
       text-decoration: underline ${theme.colors.white};
       background-color: ${theme.colors.background_dark};
+      border-bottom: 0px solid ${theme.colors.background_dark};
       color: ${theme.colors.white};
     }
   }
