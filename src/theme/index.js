@@ -16,6 +16,7 @@ const colors = {
   greySemiDark: "#93a2b1",
   greyDark: "#6f737e",
   greyBlue: "#747b91",
+  GreyLightBlue: '#93A2B1',
   orange: "#f56a2c",
 };
 

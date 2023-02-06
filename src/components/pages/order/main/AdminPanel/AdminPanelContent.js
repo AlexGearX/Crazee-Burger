@@ -13,7 +13,7 @@ export default function AdminPanelContent({ adminPanelContent }) {
 }
 const AdminPanelContentStyled = styled.div`
   background: ${theme.colors.white};
-  box-shadow: inset 0px -1px 20px 2px rgba(0, 0, 0, 0.1);
+  box-shadow:  0px -1px 20px 2px rgba(0, 0, 0, 0.1);
   .content-collapse {
     height: 0px;
   }

@@ -7,7 +7,7 @@ export default function SecondaryButton({ onClick, label, icon, className }) {
     <SecondaryButtonStyled className={className} onClick={onClick}>
       <div className="btn-container">
         <div className="icon">{icon}</div>
-        {label}
+        {label !== '' ? <text>{label}</text> : undefined}
       </div>
     </SecondaryButtonStyled>
   );
@@ -21,19 +21,19 @@ const SecondaryButtonStyled = styled.button`
 
   font-family: "Open Sans", sans-serif;
   font-size: ${theme.fonts.P0};
-  font-weight: ${theme.weights.semiBold};
+  font-weight: ${theme.weights.regular};
   background: ${theme.colors.white};
   border: 1px solid ${theme.colors.greyLight};
-  color: ${theme.colors.white};
-  font-weight: ${theme.weights.medium};
   border-radius: ${theme.borderRadius.round} ${theme.borderRadius.round} 0 0;
-  color: ${theme.colors.greyMedium};
-  height: 40px;
-  padding: 0 15px 0 15px;
+  color: ${theme.colors.GreyLightBlue};
+  height: 43px;
+  padding: 0 22px 0 22px;
   margin-right: 1px;
-
+text{
+  padding-left:10px;
+}
   .btn-container{
-      display: flex;
+  display: flex;
   flex-direction: row;
   align-items: center;
   }
@@ -41,14 +41,14 @@ const SecondaryButtonStyled = styled.button`
   cursor: pointer;
 
   :hover {
-    text-decoration: underline ${theme.colors.greyDark};
+    text-decoration: underline ${theme.colors.GreyLightBlue};
     border-bottom: 1px solid ${theme.colors.white};
     background-color: ${theme.colors.white};
   }
 
   .icon {
-    font-size: ${theme.fonts.P2};
-    padding: 5px 10px 0 10px;
+    font-size: 16px;
+    padding: 5px 0 0 0;
   }
 
 `;
