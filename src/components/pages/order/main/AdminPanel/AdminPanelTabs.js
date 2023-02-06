@@ -19,7 +19,7 @@ export default function AdminPanelTabs({ setAdminContent, adminContent }) {
     if (id === 1) {
       setAdminContent({ collapse: !adminContent.collapse });
     } else {
-      setAdminContent({ collapse: false });
+      setAdminContent({ collapse: false, id:id });
       setActiveContent(id);
     }
   };

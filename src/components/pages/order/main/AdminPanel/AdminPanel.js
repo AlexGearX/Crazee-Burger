@@ -8,7 +8,7 @@ import { theme } from "../../../../../theme";
 
 export default function AdminPanel() {
   const [adminContent, setAdminContent] = useState({
-    content: "Ajouter un produit",
+    id:2,
     collapse: false,
   });
   const { isModeAdmin } = useContext(AdminPanelContext);

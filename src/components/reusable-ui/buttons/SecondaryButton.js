@@ -7,7 +7,7 @@ export default function SecondaryButton({ onClick, label, icon, className }) {
     <SecondaryButtonStyled className={className} onClick={onClick}>
       <div className="btn-container">
         <div className="icon">{icon}</div>
-        {label !== '' ? <text>{label}</text> : undefined}
+        {label && <p>{label}</p>}
       </div>
     </SecondaryButtonStyled>
   );
@@ -29,7 +29,7 @@ const SecondaryButtonStyled = styled.button`
   height: 43px;
   padding: 0 22px 0 22px;
   margin-right: 1px;
-text{
+p{
   padding-left:10px;
 }
   .btn-container{
