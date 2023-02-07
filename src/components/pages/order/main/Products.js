@@ -6,6 +6,7 @@ import { formatPrice } from "../../../../utils/math";
 import Card from "../../../reusable-ui/Card";
 import AdminPanel from "./AdminPanel/AdminPanel";
 
+
 export default function Products() {
   const [menu, setMenu] = useState(fakeMenu2);
 
@@ -25,7 +26,6 @@ export default function Products() {
   );
 }
 const ProductStyled = styled.div`
-  flex: 1;
   display: grid;
   justify-items: center;
   align-items: center;

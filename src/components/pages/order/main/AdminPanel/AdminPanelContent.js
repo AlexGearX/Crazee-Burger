@@ -5,7 +5,6 @@ import AddProduct from "./AddProduct";
 import EditProduct from "./EditProduct";
 
 export default function AdminPanelContent({ adminPanelContent }) {
-console.log(adminPanelContent.id)
   return (
     <AdminPanelContentStyled>
       <div className={`${adminPanelContent.collapse ? "content-collapse" : "content-show"}`}>

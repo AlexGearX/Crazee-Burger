@@ -46,11 +46,10 @@ const AdminPanelNavStyled = styled.div`
   .button-active {
     background-color: ${theme.colors.background_dark};
     color: ${theme.colors.white};
-    border-bottom: 1px solid ${theme.colors.greyLight};
+    border: 1px solid ${theme.colors.background_dark};
     :hover {
       text-decoration: underline ${theme.colors.white};
       background-color: ${theme.colors.background_dark};
-      border-bottom: 1px solid ${theme.colors.background_dark};
       color: ${theme.colors.white};
     }
   }
@@ -58,8 +57,7 @@ const AdminPanelNavStyled = styled.div`
     border-radius: 0 0 ${theme.borderRadius.round} ${theme.borderRadius.round};
     transform: rotate(180deg);
     :hover{
-      border-bottom: 1px solid ${theme.colors.greyLight};
-      border-top: 1px solid ${theme.colors.background_dark};
+      border: 1px solid ${theme.colors.background_dark};
     }
   }
 `;
