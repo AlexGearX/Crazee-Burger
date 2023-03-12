@@ -1,29 +1,33 @@
 import React from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import AdminPanelContext from "../../../context/AdminPanelContext";
+import OrderContext from "../../../context/OrderContext";
 import { theme } from "../../../theme";
 import Main from "./Main/Main";
 import Navbar from "./Navbar/Navbar";
 
 export default function OrderPage() {
-  const { name } = useParams();
-  const [isModeAdmin, setIsModeAdmin] = useState(false);
-  const isModeAdminContextValue = {
+  const [isModeAdmin, setIsModeAdmin] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState(false)
+  const [currentTabSelected, setCurrentTabSelected] = useState("add")
+  const orderContextValue = {
     isModeAdmin,
     setIsModeAdmin,
-  };
+    isCollapsed,
+    setIsCollapsed,
+    currentTabSelected,
+    setCurrentTabSelected,
+  }
 
   return (
-    <AdminPanelContext.Provider value={isModeAdminContextValue}>
+    <OrderContext.Provider value={orderContextValue}>
       <OrderPageStyled>
         <div className="container">
-          <Navbar name={name} />
+          <Navbar />
           <Main />
         </div>
       </OrderPageStyled>
-    </AdminPanelContext.Provider>
+    </OrderContext.Provider>
   );
 }
 

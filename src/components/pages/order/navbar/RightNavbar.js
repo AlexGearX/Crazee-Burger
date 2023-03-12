@@ -1,14 +1,16 @@
 import React, { useContext } from "react";
 import { toast, ToastContainer } from "react-toastify";
+import { useParams } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import styled from "styled-components";
-import AdminPanelContext from "../../../../context/AdminPanelContext";
+import OrderContext from "../../../../context/OrderContext";
 import { theme } from "../../../../theme";
 import ToggleButton from "../../../reusable-ui/ToggleButton";
 import Profile from "./Profile";
 
-export default function RightNavbar({ name }) {
-  const { isModeAdmin, setIsModeAdmin } = useContext(AdminPanelContext);
+export default function RightNavbar() {
+  const { isModeAdmin, setIsModeAdmin } = useContext(OrderContext);
+  const { name } = useParams();
   const DisplayToast = () => {
     if (!isModeAdmin) {
       toast.info("Mode admin activé", {
