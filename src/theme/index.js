@@ -16,7 +16,7 @@ const colors = {
   greySemiDark: "#93a2b1",
   greyDark: "#6f737e",
   greyBlue: "#747b91",
-  GreyLightBlue: '#93A2B1',
+  greyLightBlue: '#93A2B1',
   orange: "#f56a2c",
 };
 
@@ -53,7 +53,11 @@ const borderRadius = {
   extraRound: "15px",
   circle: "50%",
 };
-const shadows = {};
+const shadows = {
+  subtle: "0px -6px 8px -2px rgba(0, 0, 0, 0.1)",
+  medium: "-8px 8px 20px 0px rgb(0 0 0 / 20%)",
+  strong: "0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset",
+}
 const weights = {
   light: 300,
   regular: 400,
