@@ -2,18 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../theme";
 
-export default function SecondaryButton({ onClick, label, icon, className }) {
+export default function Tab({ onClick, label, icon, className }) {
   return (
-    <SecondaryButtonStyled className={className} onClick={onClick}>
+    <TabStyled className={className} onClick={onClick}>
       <div className="btn-container">
-        <div className="icon">{icon}</div>
+        {icon && <div className="icon">{icon}</div>}
         {label && <p>{label}</p>}
       </div>
-    </SecondaryButtonStyled>
+    </TabStyled>
   );
 }
 
-const SecondaryButtonStyled = styled.button`
+const TabStyled = styled.button`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -25,7 +25,7 @@ const SecondaryButtonStyled = styled.button`
   background: ${theme.colors.white};
   border: 1px solid ${theme.colors.greyLight};
   border-radius: ${theme.borderRadius.round} ${theme.borderRadius.round} 0 0;
-  color: ${theme.colors.GreyLightBlue};
+  color: ${theme.colors.greyLightBlue};
   height: 43px;
   padding: 0 22px 0 22px;
   margin-right: 1px;
@@ -41,7 +41,7 @@ p{
   cursor: pointer;
 
   :hover {
-    text-decoration: underline ${theme.colors.GreyLightBlue};
+    text-decoration: underline ${theme.colors.greyLightBlue};
     border-bottom: 1px solid ${theme.colors.white};
     background-color: ${theme.colors.white};
   }
@@ -50,5 +50,4 @@ p{
     font-size: 16px;
     padding: 5px 0 0 0;
   }
-
 `;
