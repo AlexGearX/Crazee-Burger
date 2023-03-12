@@ -4,7 +4,6 @@ import { fakeMenu2 } from "../../../../fakeData/fakeMenu";
 import { theme } from "../../../../theme";
 import { formatPrice } from "../../../../utils/math";
 import Card from "../../../reusable-ui/Card";
-import AdminPanel from "./AdminPanel/AdminPanel";
 
 
 export default function Products() {
@@ -21,7 +20,6 @@ export default function Products() {
           label={"Ajouter"}
         ></Card>
       ))}
-      <AdminPanel />
     </ProductStyled>
   );
 }
