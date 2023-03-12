@@ -5,12 +5,12 @@ import ReloadPage from "../../../../utils/windows";
 import Logo from "../../../reusable-ui/Logo";
 import RightNavbar from "./RightNavbar";
 
-export default function Navbar({ name }) {
+export default function Navbar() {
   const reloadPage = () => ReloadPage();
   return (
     <NavbarStyled>
       <Logo className="logo" onClick={reloadPage} />
-      <RightNavbar name={name} />
+      <RightNavbar />
     </NavbarStyled>
   );
 }

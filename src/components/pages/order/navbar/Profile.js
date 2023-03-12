@@ -24,7 +24,7 @@ const ProfileStyled = styled.div`
   margin-right: 70px;
   height: 10vh;
   padding-left: 50px;
-  }
+
   .user-info {
     display: flex;
     flex-direction: column;
@@ -40,18 +40,19 @@ const ProfileStyled = styled.div`
         color: ${theme.colors.primary};
         font-weight: ${theme.weights.bold};
       }
-    }  
+    }
     a {
-    cursor: pointer;
-    text-decoration: none;
-    background-color: transparent;
-    border: 0px;
-    font-family: "Open Sans", sans-serif;
-    font-size: ${theme.fonts.XS};
-    font-weight: ${theme.weights.medium};
-    color: ${theme.colors.greyDark};
-    &:hover {
-      text-decoration: underline ${theme.colors.dark};
+      cursor: pointer;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0px;
+      font-family: "Open Sans", sans-serif;
+      font-size: ${theme.fonts.XS};
+      font-weight: ${theme.weights.medium};
+      color: ${theme.colors.greyDark};
+      &:hover {
+        text-decoration: underline ${theme.colors.dark};
+      }
     }
   }
 `;
