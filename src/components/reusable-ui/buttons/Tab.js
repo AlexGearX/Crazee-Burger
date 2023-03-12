@@ -26,8 +26,9 @@ const TabStyled = styled.button`
   border: 1px solid ${theme.colors.greyLight};
   border-radius: ${theme.borderRadius.round} ${theme.borderRadius.round} 0 0;
   color: ${theme.colors.greyLightBlue};
+  
   height: 43px;
-  padding: 0 22px 0 22px;
+  padding: 0 22px;
   margin-right: 1px;
 p{
   padding-left:10px;

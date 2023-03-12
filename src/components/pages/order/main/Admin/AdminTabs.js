@@ -39,7 +39,7 @@ export default function AdminTabs() {
 
 const AdminTabsStyled = styled.div`
   display: flex;
-
+  margin-left:71px;
   .is-active {
     background: ${theme.colors.background_dark};
     color: ${theme.colors.white};
