@@ -1,8 +1,8 @@
 import React from "react";
 import { theme } from "../../../../../theme";
 import styled from "styled-components";
-import AddProduct from "./AddProduct";
-import EditProduct from "./EditProduct";
+import AddProduct from "./Panel/AddProduct";
+import EditProduct from "./Panel/EditProduct";
 
 export default function AdminPanelContent({ adminPanelContent }) {
   return (

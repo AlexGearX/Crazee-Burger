@@ -1,21 +1,18 @@
 import { BsPlusLg } from "react-icons/bs";
-import { IoIosArrowDown } from "react-icons/io";
 import { MdEdit } from "react-icons/md";
 
-export const panelTabsConfig = [
+export const tabsConfig = [
   {
-    id: 1,
-    icon: <IoIosArrowDown />,
-    label: "",
-  },
-  {
-    id: 2,
+    index: 'add',
     icon: <BsPlusLg />,
     label: "Ajouter un produit",
   },
   {
-    id: 3,
+    index: 'edit',
     icon: <MdEdit />,
     label: "Modifier un produit",
   },
 ];
+
+export const getTabSelected = (tabs, currentTabSelected) =>
+  tabs.find((tab) => tab.index === currentTabSelected)
