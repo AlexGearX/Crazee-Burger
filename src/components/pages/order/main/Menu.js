@@ -5,7 +5,7 @@ import { theme } from "../../../../theme";
 import { formatPrice } from "../../../../utils/math";
 import Card from "../../../reusable-ui/Card";
 
-export default function Products() {
+export default function Menu() {
   const { menu, handleAdd } = useContext(OrderContext)
   return (
     <ProductStyled>

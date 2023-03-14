@@ -4,14 +4,14 @@ import styled from "styled-components";
 import OrderContext from "../../../../context/OrderContext";
 import Admin from "./Admin/Admin";
 // import Basket from "./Basket";
-import Products from "./Products";
+import Menu from "./Menu";
 
 export default function Main() {
     const { isModeAdmin } = useContext(OrderContext)
   return (
     <MainStyled>
       {/* <Basket /> */}
-      <Products />
+      <Menu />
       {isModeAdmin && <Admin />}
     </MainStyled>
   );
