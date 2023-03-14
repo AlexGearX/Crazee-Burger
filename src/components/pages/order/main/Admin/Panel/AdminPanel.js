@@ -3,8 +3,6 @@ import styled from "styled-components"
 import OrderContext from "../../../../../../context/OrderContext"
 import { theme } from "../../../../../../theme"
 import { tabsConfig, getTabSelected } from "../tabsConfig"
-import AddForm from "./AddForm"
-import EditForm from "./EditForm"
 
 export default function AdminPanel() {
   const { currentTabSelected } = useContext(OrderContext)

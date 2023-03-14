@@ -1,16 +1,24 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components';
+import OrderContext from '../../../../../../context/OrderContext';
 
 export default function AddForm() {
+const { menu, handleAdd } = useContext(OrderContext)
+
+  const handleSubmit = (e) => { 
+    e.preventDefault();
+    // handleAdd(newProduct);
+  }
+
   return (
-    <AddFormStyled>
+    <AddFormStyled onSubmit={handleSubmit}>
       <div className='image-preview'>Image Preview</div>
       <div className='input-fields'>
         <input type="text" placeholder="Nom du produit (ex: Super Burger)"></input>
         <input type="text" placeholder="Lien URL d'une image (ex: https://la-photo-de-mon-produit.png)"></input>
         <input type="text" placeholder='Prix'></input>
       </div>
-      <div className='submit-button'>Validation</div>  
+      <button className='submit-button'>Validation</button>  
     </AddFormStyled> 
   )
 }
