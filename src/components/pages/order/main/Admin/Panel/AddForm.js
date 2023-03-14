@@ -1,22 +1,35 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components';
 import OrderContext from '../../../../../../context/OrderContext';
 
-export default function AddForm() {
-const { menu, handleAdd } = useContext(OrderContext)
 
-  const handleSubmit = (e) => { 
-    e.preventDefault();
-    // handleAdd(newProduct);
+const EMPTY_PRODUCT = {
+    title: "",
+    imageSource: "",
+    price: "",
+  }
+
+export default function AddForm() {
+const { handleAdd } = useContext(OrderContext)
+  const [newProduct, setNewProduct] = useState(EMPTY_PRODUCT);
+  
+  
+  const handleChange = (event) => { 
+    setNewProduct({...newProduct, [event.target.name]: event.target.value})
+  }
+  
+  const handleSubmit = (event) => { 
+    event.preventDefault();
+    handleAdd(newProduct);
   }
 
   return (
     <AddFormStyled onSubmit={handleSubmit}>
       <div className='image-preview'>Image Preview</div>
       <div className='input-fields'>
-        <input type="text" placeholder="Nom du produit (ex: Super Burger)"></input>
-        <input type="text" placeholder="Lien URL d'une image (ex: https://la-photo-de-mon-produit.png)"></input>
-        <input type="text" placeholder='Prix'></input>
+        <input type="text" name='title' placeholder="Nom du produit (ex: Super Burger)" onChange={handleChange}></input>
+        <input type="text" name='imageSource' placeholder="Lien URL d'une image (ex: https://la-photo-de-mon-produit.png)" onChange={handleChange}></input>
+        <input type="text" name='price' placeholder='Prix' onChange={handleChange}></input>
       </div>
       <button className='submit-button'>Validation</button>  
     </AddFormStyled> 
