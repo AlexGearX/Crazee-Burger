@@ -2,9 +2,9 @@ import { useContext } from "react"
 import styled from "styled-components"
 import OrderContext from "../../../../../../context/OrderContext"
 import { theme } from "../../../../../../theme"
-import AddProduct from "./AddProduct"
-import EditProduct from "./EditProduct"
 import { tabsConfig, getTabSelected } from "../tabsConfig"
+import AddForm from "./AddForm"
+import EditForm from "./EditForm"
 
 export default function AdminPanel() {
   const { currentTabSelected } = useContext(OrderContext)
@@ -13,8 +13,7 @@ export default function AdminPanel() {
   const tabSelected = getTabSelected(tabs, currentTabSelected)
 
   return <AdminPanelStyled>
-    {tabSelected.index === 'add' && <AddProduct />}
-    {tabSelected.index === 'edit' && <EditProduct />}
+    {tabSelected.content }
   </AdminPanelStyled>
 }
 
