@@ -17,8 +17,8 @@ const PrimaryButtonStyled = styled.button`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 50px;
-  width: 380px;
+  height: 55px;
+  width: 400px;
 
   border: 1px solid ${theme.colors.primary};
   border-radius: ${theme.borderRadius.round};

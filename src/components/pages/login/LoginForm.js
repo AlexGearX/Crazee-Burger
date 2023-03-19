@@ -25,18 +25,12 @@ export default function LoginForm() {
           onChange={handleChange}
           placeholder="Entrez votre prénom"
           required
-          icon={
-            <div className="personcircle">
-              <IoPersonCircleOutline size={25} color={theme.colors.greyBlue} />
-            </div>
-          }
+          icon={<IoPersonCircleOutline className="personcircle" size={20} color={theme.colors.greyBlue} />}
         />
         <PrimaryButton
           label="Accéder à mon espace"
           icon={
-            <div className="arrow">
-              <MdKeyboardArrowRight size={20} />
-            </div>
+              <MdKeyboardArrowRight className="arrow" size={20} />
           }
         />
       </div>
@@ -73,11 +67,10 @@ const LoginFormStyled = styled.form`
     align-items: center;
 
     .personcircle {
-      padding-top: 5px;
       padding-right: 10px;
     }
     .arrow {
-      padding-top: 3px;
+      padding-top: 2px;
       margin-left: 10px;
     }
   }

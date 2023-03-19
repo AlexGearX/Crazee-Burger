@@ -4,10 +4,11 @@ import { theme } from "../../theme";
 
 export default function TextInput({ value, onChange, icon, ...extraProps }) {
   
+
   return (
-    <TextInputStyled>
+    <TextInputStyled >
       {icon}
-      <input value={value} type="text" onChange={onChange} {...extraProps} />
+      <input autoFocus value={value} type="text" onChange={onChange} {...extraProps} />
     </TextInputStyled>
   );
 }
@@ -18,8 +19,8 @@ const TextInputStyled = styled.div`
   justify-content: center;
   align-items: center;
 
-  height: 50px;
-  width: 380px;
+  height: 55px;
+  width: 400px;
 
   border-radius: ${theme.borderRadius.round};
   border: 1px solid black;
@@ -34,7 +35,7 @@ const TextInputStyled = styled.div`
     font-size: ${theme.fonts.M};
     font-weight: ${theme.weights.semiBold};
     width: 300px;
-    border: 0px;
+    border: none;
     &::placeholder {
       color: ${theme.colors.greyMedium};
       font-weight: ${theme.weights.medium};
