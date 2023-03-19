@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import styled from 'styled-components';
 import OrderContext from '../../../../../../context/OrderContext';
+import ImagePreview from './ImagePreview';
 
 
 const EMPTY_PRODUCT = {
@@ -25,7 +26,7 @@ const { handleAdd } = useContext(OrderContext)
 
   return (
     <AddFormStyled onSubmit={handleSubmit}>
-      <div className='image-preview'>Image Preview</div>
+      <ImagePreview />
       <div className='input-fields'>
         <input type="text" name='title' placeholder="Nom du produit (ex: Super Burger)" onChange={handleChange}></input>
         <input type="text" name='imageSource' placeholder="Lien URL d'une image (ex: https://la-photo-de-mon-produit.png)" onChange={handleChange}></input>
@@ -40,16 +41,9 @@ const AddFormStyled = styled.form`
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: repeat(4, 1fr);
+  margin-left:71px;
   height: 100%;
   width:70%;
-
-  .image-preview{
-    background: red;
-    grid-area: 1/1/4/2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   
   .input-fields{
     background: blue;
